@@ -1,0 +1,70 @@
+body {
+  background-color: #5C001F;
+}
+
+.logo {
+  margin-block: 10px;
+  margin-left: 20px;
+  margin-right: 50px;
+  width: 80px;
+}
+
+.navbar li {
+  margin-inline: 20px;
+  font-size: 1.2rem;
+}
+
+.nav-link, .cart {
+  transition: .3s;
+}
+
+.nav-link:hover, .cart:hover {
+  scale: 1.1;
+}
+
+.cartButton {
+  position: relative;
+  background: none;
+  border: none;
+  font-size: .9rem;
+}
+
+.cart {
+  width: 35px;
+}
+
+.cartNotification {
+  position: absolute;
+  transform: translateX(-5px);
+}
+
+.cartNotification:hover {
+  cursor: default;
+}
+
+.aviso {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.aviso div {
+  justify-content: center;
+}
+
+.title {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.logoLanding {
+  width: 500px;
+  margin-bottom: 35px;
+}
+
+.greeting {
+  color: rgb(255, 255, 156);
+  font-size: 1.5rem;
+}
+
