@@ -68,3 +68,143 @@ body {
   font-size: 1.5rem;
 }
 
+.grid {
+  display: grid;
+  width: 1380px;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-areas:
+  "cpu cpu cpu cpu cpu gab gab gab gab"
+  "cpu cpu cpu cpu cpu gab gab gab gab"
+  "cpu cpu cpu cpu cpu gab gab gab gab"
+  "cpu cpu cpu cpu cpu mdb mdb mdb mdb"
+  "gpu gpu gpu mus mus mdb mdb mdb mdb"
+  "gpu gpu gpu mus mus mdb mdb mdb mdb"
+  "gpu gpu gpu mus mus lap lap lap lap"
+  "mon mon mon mon mon lap lap lap lap"
+  "mon mon mon mon mon lap lap lap lap"
+  "mon mon mon mon mon . . . .";
+  gap: 10px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+@media (max-width: 1380px) {
+  .grid {
+    width: 800px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: 
+    "cpu cpu cpu cpu cpu"
+    "cpu cpu cpu cpu cpu"
+    "cpu cpu cpu cpu cpu"
+    "cpu cpu cpu cpu cpu"
+    "gab gab gab gab gab"
+    "gab gab gab gab gab"
+    "gab gab gab gab gab"
+    "mdb mdb mdb mdb mdb"
+    "mdb mdb mdb mdb mdb"
+    "mdb mdb mdb mdb mdb"
+    "gpu gpu gpu mus mus"
+    "gpu gpu gpu mus mus"
+    "gpu gpu gpu mus mus"
+    "mon mon mon mon mon"
+    "mon mon mon mon mon"
+    "mon mon mon mon mon"
+    "lap lap lap lap lap"
+    "lap lap lap lap lap"
+    "lap lap lap lap lap";
+  }
+}
+
+.grid div {
+  position: relative;
+}
+
+.grid div h1 {
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  margin: 0;
+  bottom: 0px;
+  left: 0px;
+}
+
+.grid div img {
+  width: 100%;
+  height: 100%;
+}
+
+.grid div img:hover {
+  cursor: pointer;
+}
+
+#procesador {
+  grid-area: cpu;
+}
+
+#gabinete {
+  grid-area: gab;
+}
+
+#grafica {
+  grid-area: gpu;
+}
+
+#mouse {
+  grid-area: mus;
+}
+
+#motherboard {
+  grid-area: mdb;
+}
+
+#monitor {
+  grid-area: mon;
+}
+
+#laptop {
+  grid-area: lap;
+}
+
+/* .grid div {
+  background-color: white;
+  min-width: 250px;
+  min-height: 250px;
+  grid-area: a;
+}
+
+.grid div:nth-child(2) {
+  grid-column-start: span 3;
+  grid-area: b;
+}
+
+.grid div:nth-child(3) {
+  grid-row-start: span 2;
+  grid-area: c;
+}
+
+.grid div:nth-child(4) {
+  grid-row-start: span 2;
+  grid-area: d;
+}
+
+.grid div:nth-child(5) {
+  grid-column-start: span 3;
+  grid-area: e;
+}
+
+.grid div:nth-child(6) {
+  grid-row-start: span 2;
+  grid-area: f;
+}
+
+.grid div:nth-child(7) {
+  grid-row-start: span 2;
+  grid-area: g;
+} */
+
+/* .grid div img{
+  display: none;
+  max-width: 400px;
+} */
