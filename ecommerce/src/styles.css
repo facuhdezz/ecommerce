@@ -84,19 +84,20 @@ p, h1, h2, h3, h4, h5 {
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: repeat(10, 1fr);
   grid-template-areas:
+  "cpu cpu cpu cpu cpu lap lap lap lap"
+  "cpu cpu cpu cpu cpu lap lap lap lap"
+  "cpu cpu cpu cpu cpu lap lap lap lap"
   "cpu cpu cpu cpu cpu gab gab gab gab"
-  "cpu cpu cpu cpu cpu gab gab gab gab"
-  "cpu cpu cpu cpu cpu gab gab gab gab"
-  "cpu cpu cpu cpu cpu mdb mdb mdb mdb"
+  "gpu gpu gpu mus mus gab gab gab gab"
+  "gpu gpu gpu mus mus gab gab gab gab"
   "gpu gpu gpu mus mus mdb mdb mdb mdb"
-  "gpu gpu gpu mus mus mdb mdb mdb mdb"
-  "gpu gpu gpu mus mus lap lap lap lap"
-  "mon mon mon mon mon lap lap lap lap"
-  "mon mon mon mon mon lap lap lap lap"
+  "mon mon mon mon mon mdb mdb mdb mdb"
+  "mon mon mon mon mon mdb mdb mdb mdb"
   "mon mon mon mon mon . . . .";
   gap: 20px;
   margin: 0 auto;
   margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .grid > div {
@@ -175,7 +176,7 @@ p, h1, h2, h3, h4, h5 {
 
 @media (max-width: 700px) {
   .grid {
-    width: 95vw;
+    width: 90vw;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
     grid-template-areas: 
@@ -183,21 +184,22 @@ p, h1, h2, h3, h4, h5 {
     "cpu cpu cpu cpu cpu"
     "cpu cpu cpu cpu cpu"
     "cpu cpu cpu cpu cpu"
-    "gab gab gab gab gab"
-    "gab gab gab gab gab"
-    "gab gab gab gab gab"
-    "mdb mdb mdb mdb mdb"
-    "mdb mdb mdb mdb mdb"
-    "mdb mdb mdb mdb mdb"
-    "gpu gpu gpu mus mus"
-    "gpu gpu gpu mus mus"
-    "gpu gpu gpu mus mus"
-    "mon mon mon mon mon"
-    "mon mon mon mon mon"
-    "mon mon mon mon mon"
     "lap lap lap lap lap"
     "lap lap lap lap lap"
-    "lap lap lap lap lap";
+    "lap lap lap lap lap"
+    "gab gab gab gab gab"
+    "gab gab gab gab gab"
+    "gab gab gab gab gab"
+    "gpu gpu gpu mus mus"
+    "gpu gpu gpu mus mus"
+    "gpu gpu gpu mus mus"
+    "mon mon mon mon mon"
+    "mon mon mon mon mon"
+    "mon mon mon mon mon"
+    "mdb mdb mdb mdb mdb"
+    "mdb mdb mdb mdb mdb"
+    "mdb mdb mdb mdb mdb";
+    gap: 10px;
   }
 }
 
