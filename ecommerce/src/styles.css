@@ -2,6 +2,16 @@ body {
   background: rgb(0,0,0);
   background: linear-gradient(153deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(1,16,73,1) 70%, rgba(0,0,0,1) 90%, rgba(0,0,0,1) 100%);
   background-attachment: fixed;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  cursor: pointer;
 }
 
 /* #1e1e21 */
@@ -9,13 +19,6 @@ body {
 
 p, h1, h2, h3, h4, h5 {
   margin: 0;
-}
-
-.logo {
-  margin-block: 10px;
-  margin-left: 20px;
-  margin-right: 50px;
-  width: 80px;
 }
 
 .navbar li {
@@ -51,15 +54,130 @@ p, h1, h2, h3, h4, h5 {
   cursor: default;
 }
 
-.aviso {
+/*   ASIDE   */
+
+main {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  height: 100vh;
+  padding: 10px;
+}
+
+aside {
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
+  gap: 10px;
+  width: 430px;
+  height: 100%;
+}
+
+aside > article {
+  border-radius: 10px;
+}
+
+.topAside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #0e0e14;
+  margin-right: 0;
+  gap: 20px;
+  padding: 30px;
+}
+
+.bodyAside {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #0e0e14;
+  margin-right: 0;
+  gap: 20px;
+  padding: 30px;
+}
+
+.bodyAside a {
+  font-size: 1.4rem;
+  transition: .2s;
+}
+
+.bodyAside a:hover {
+  letter-spacing: 2px;
+}
+
+.logo {
+  width: 90%;
+}
+
+main > section {
+  background-color: #0e0e14;
+  width: 80vw;
+  height: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  overflow-y: scroll;
+}
+
+main > section::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 5px;
+}
+
+main > section::-webkit-scrollbar-thumb {
+  background-color: #797979;
+  border-radius: 20px;
+}
+
+main > section::-webkit-scrollbar-track {
+  width: 5px;
+  border-radius: 5px;
+}
+
+.titulos {
+  margin-left: 20px;
+}
+
+.aviso {
+  width: 100%;
+  margin-bottom: 50px;
+  padding-bottom: 10px;
+  overflow-x: scroll;
+}
+
+
+.aviso::-webkit-scrollbar {
+  height: 5px;
+  background-color: #252525;
+}
+
+.aviso::-webkit-scrollbar-thumb {
+  background-color: #797979;
+  border-radius: 20px;
+}
+
+.itemList {
+  margin: 10px;
+}
+
+.card {
+  background-color: #252525;
+  width: 200px;
+  border: none;
+  box-shadow: 0 0 10px 5px black;
+  padding: 5px;
+}
+
+.card-body {
+  color: white;
   text-align: center;
 }
 
-.aviso div {
-  justify-content: center;
+.card h1 {
+  font-size: 1rem;
+}
+
+.card img {
+  background-color: white;
 }
 
 .title {
@@ -81,7 +199,7 @@ p, h1, h2, h3, h4, h5 {
 
 .grid {
   display: grid;
-  width: 1150px;
+  width: 98%;
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: auto;
   grid-template-areas:
@@ -95,10 +213,10 @@ p, h1, h2, h3, h4, h5 {
   "mdb mdb mdb mus mus gab gab gab gab"
   "mdb mdb mdb mus mus gab gab gab gab"
   "mdb mdb mdb mus mus gab gab gab gab";
-  gap: 10px;
+  gap: 20px;
   margin: 0 auto;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 10px;
+  border-radius: 10px;
 }
 
 .grid > div {
@@ -173,15 +291,31 @@ p, h1, h2, h3, h4, h5 {
   grid-area: ram;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
+  aside {
+    width: 450px;
+  }
+  
   .grid {
-    width: 95vw;
+    width: 98%;
+  }
+
+  .titulo h1 {
+    font-size: 1.1rem;
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1100px) {
+  .card {
+    width: 150px;
+  }
+
+  aside {
+    width: 450px;
+  }
+
   .grid {
-    width: 90vw;
+    width: 98%;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
     grid-template-areas: 

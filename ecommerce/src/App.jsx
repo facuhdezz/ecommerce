@@ -1,13 +1,21 @@
+import Aside from "./components/Aside"
 import ItemListContainer from "./components/ItemListContainer"
-import NavBar from "./components/NavBar"
 import Content from "./components/content"
 
 function App() {
   return (
     <>
-    <NavBar></NavBar>
-    <ItemListContainer greeting={"La página actualmente se encuentra en desarrollo!"}></ItemListContainer>
-    <Content />
+      <main>
+        <aside>
+          <Aside />
+        </aside>
+        <section>
+          <h1 className="titulos">Destacados</h1>
+          <ItemListContainer greeting={"La página actualmente se encuentra en desarrollo!"}></ItemListContainer>
+          <h1 className="titulos">Descubrí</h1>
+          <Content />
+        </section>
+      </main>
     </>
   )
 }
