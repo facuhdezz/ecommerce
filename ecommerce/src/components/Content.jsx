@@ -13,7 +13,7 @@ const Content = () => {
     return (
         <section className="grid">
             <Card img={Procesador} description={"Procesadores"} id={"procesador"}/>
-            <Card img={Gabinete} description={"Gabinete de PC"} id={"gabinete"}/>
+            <Card img={Gabinete} description={"Gabinetes de PC"} id={"gabinete"}/>
             <Card img={Grafica} description={"Tarjetas Gráficas"} id={"grafica"}/>
             <Card img={Mouse} description={"Periféricos"} id={"mouse"}/>
             <Card img={Motherboard} description={"Motherboards"} id={"motherboard"}/>
