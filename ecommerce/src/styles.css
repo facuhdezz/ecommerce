@@ -1,3 +1,10 @@
+/* #1e1e21 */
+/* #5C001F */
+
+*{
+  scroll-behavior: smooth;
+}
+
 body {
   background: rgb(0,0,0);
   background: linear-gradient(153deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(1,16,73,1) 70%, rgba(0,0,0,1) 90%, rgba(0,0,0,1) 100%);
@@ -14,23 +21,68 @@ a:hover {
   cursor: pointer;
 }
 
-/* #1e1e21 */
-/* #5C001F */
-
 p, h1, h2, h3, h4, h5 {
   margin: 0;
 }
 
-.navbar li {
-  margin-inline: 20px;
+/* ----- CUERPO DE LA PÁGINA ----- */
+
+.root {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  height: 100vh;
+  padding: 10px;
+}
+
+/* ----- ASIDE ----- */
+
+aside {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 430px;
+  height: 100%;
+}
+
+.topAside, .bodyAside {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #0e0e14;
+  margin-right: 0;
+  gap: 20px;
+  padding: 30px;
+}
+
+.logo {
+  width: 90%;
+}
+
+.bodyAside {
+  height: 100%;
+  gap: 10px;
+}
+
+.bodyAside a {
   font-size: 1.2rem;
+  transition: .2s;
 }
 
-.nav-link, .cart {
+.bodyAside a:hover {
+  letter-spacing: 2px;
+}
+
+.bodyAside article {
+  margin-top: 15px;
+}
+
+.cart {
   transition: .3s;
+  width: 35px;
 }
 
-.nav-link:hover, .cart:hover {
+.cart:hover {
   scale: 1.1;
 }
 
@@ -39,10 +91,6 @@ p, h1, h2, h3, h4, h5 {
   background: none;
   border: none;
   font-size: .9rem;
-}
-
-.cart {
-  width: 35px;
 }
 
 .cartNotification {
@@ -54,62 +102,9 @@ p, h1, h2, h3, h4, h5 {
   cursor: default;
 }
 
-/*   ASIDE   */
+/* ----- MAIN ----- */
 
-main {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  height: 100vh;
-  padding: 10px;
-}
-
-aside {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 430px;
-  height: 100%;
-}
-
-aside > article {
-  border-radius: 10px;
-}
-
-.topAside {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #0e0e14;
-  margin-right: 0;
-  gap: 20px;
-  padding: 30px;
-}
-
-.bodyAside {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: #0e0e14;
-  margin-right: 0;
-  gap: 20px;
-  padding: 30px;
-}
-
-.bodyAside a {
-  font-size: 1.4rem;
-  transition: .2s;
-}
-
-.bodyAside a:hover {
-  letter-spacing: 2px;
-}
-
-.logo {
-  width: 90%;
-}
-
-main > section {
+.root > main {
   background-color: #0e0e14;
   width: 80vw;
   height: 100%;
@@ -118,17 +113,17 @@ main > section {
   overflow-y: scroll;
 }
 
-main > section::-webkit-scrollbar {
+.root > main::-webkit-scrollbar { /* Personalizo el scrollbar para navegadores con webkit */
   -webkit-appearance: none;
   width: 5px;
 }
 
-main > section::-webkit-scrollbar-thumb {
+.root > main::-webkit-scrollbar-thumb {
   background-color: #797979;
   border-radius: 20px;
 }
 
-main > section::-webkit-scrollbar-track {
+.root > main::-webkit-scrollbar-track {
   width: 5px;
   border-radius: 5px;
 }
@@ -137,20 +132,21 @@ main > section::-webkit-scrollbar-track {
   margin-left: 20px;
 }
 
-.aviso {
+/* ----- Sección de productos destacados ----- */
+
+.productos {
   width: 100%;
   margin-bottom: 50px;
   padding-bottom: 10px;
   overflow-x: scroll;
 }
 
-
-.aviso::-webkit-scrollbar {
+.productos::-webkit-scrollbar {
   height: 5px;
   background-color: #252525;
 }
 
-.aviso::-webkit-scrollbar-thumb {
+.productos::-webkit-scrollbar-thumb {
   background-color: #797979;
   border-radius: 20px;
 }
@@ -178,21 +174,6 @@ main > section::-webkit-scrollbar-track {
 
 .card img {
   background-color: white;
-}
-
-.title {
-  margin-bottom: 20px;
-  color: white;
-}
-
-.logoLanding {
-  width: 500px;
-  margin-bottom: 35px;
-}
-
-.greeting {
-  color: rgb(255, 255, 156);
-  font-size: 1.5rem;
 }
 
 /* ---- Grilla ---- */
@@ -241,14 +222,14 @@ main > section::-webkit-scrollbar-track {
   cursor: pointer;
 }
 
-.titulo {
+.tituloCat {
   position: absolute;
   bottom: 7px;
   left: 7px;
   color: white;
 }
 
-.titulo h1 {  
+.tituloCat h1 {  
   background: rgba(0,0,0,0.9);
   padding: 10px;
   border-radius: 20px;
@@ -337,56 +318,7 @@ main > section::-webkit-scrollbar-track {
     "mon mon mon mon mon"
     "mdb mdb mdb mdb mdb"
     "mdb mdb mdb mdb mdb"
-    "mdb mdb mdb mdb mdb"
-    "ram ram ram ram ram"
-    "ram ram ram ram ram"
-    "ram ram ram ram ram"
-    "equ equ equ equ equ"
-    "equ equ equ equ equ"
-    "equ equ equ equ equ"
-    "equ equ equ equ equ";
+    "mdb mdb mdb mdb mdb";
     gap: 10px;
   }
 }
-
-/* .grid div {
-  background-color: white;
-  min-width: 250px;
-  min-height: 250px;
-  grid-area: a;
-}
-
-.grid div:nth-child(2) {
-  grid-column-start: span 3;
-  grid-area: b;
-}
-
-.grid div:nth-child(3) {
-  grid-row-start: span 2;
-  grid-area: c;
-}
-
-.grid div:nth-child(4) {
-  grid-row-start: span 2;
-  grid-area: d;
-}
-
-.grid div:nth-child(5) {
-  grid-column-start: span 3;
-  grid-area: e;
-}
-
-.grid div:nth-child(6) {
-  grid-row-start: span 2;
-  grid-area: f;
-}
-
-.grid div:nth-child(7) {
-  grid-row-start: span 2;
-  grid-area: g;
-} */
-
-/* .grid div img{
-  display: none;
-  max-width: 400px;
-} */

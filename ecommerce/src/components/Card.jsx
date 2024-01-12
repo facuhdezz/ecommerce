@@ -15,7 +15,7 @@ const Card = ({ img, description, id }) => {
     return (
         <div id={id} onMouseEnter={hoverImg} onMouseLeave={hoverImg}> {/* Utilizo onMouseEnter y onMouseOver para ejecutar la funcion hoverImg al pasar el mouse por encima del div */}
             <img src={img} alt={description}/>
-            <div className="titulo">
+            <div className="tituloCat">
                 <h1 id={"titulo"+id}>{description}</h1>
             </div>
         </div>

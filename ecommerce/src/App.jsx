@@ -5,16 +5,14 @@ import Content from "./components/content"
 function App() {
   return (
     <>
+      <aside>
+        <Aside />
+      </aside>
       <main>
-        <aside>
-          <Aside />
-        </aside>
-        <section>
-          <h1 className="titulos">Destacados</h1>
-          <ItemListContainer greeting={"La página actualmente se encuentra en desarrollo!"}></ItemListContainer>
-          <h1 className="titulos">Descubrí</h1>
-          <Content />
-        </section>
+        <h1 className="titulos" id="destacados">Destacados</h1>
+        <ItemListContainer greeting={"La página actualmente se encuentra en desarrollo!"}></ItemListContainer>
+        <h1 className="titulos">Descubrí</h1>
+        <Content />
       </main>
     </>
   )

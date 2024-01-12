@@ -2,9 +2,9 @@ import ItemList from "./ItemList";
 
 const ItemListContainer = ({ greeting }) => {
     return (
-        <header className="aviso">
+        <section className="productos">
             <ItemList />
-        </header>
+        </section>
     )
 }
 
