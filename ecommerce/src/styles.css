@@ -1,8 +1,11 @@
 /* #1e1e21 */
 /* #5C001F */
 
+/* ------      ESTILOS GENERALES      ------ */
+
 *{
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 body {
@@ -25,13 +28,57 @@ p, h1, h2, h3, h4, h5 {
   margin: 0;
 }
 
+button {
+  background: none;
+  border: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.root > main::-webkit-scrollbar,
+.bodyAside::-webkit-scrollbar { /* Personalizo el scrollbar para navegadores con webkit */
+  -webkit-appearance: none;
+  width: 5px;
+}
+
+.root > main::-webkit-scrollbar-thumb,
+.bodyAside::-webkit-scrollbar-thumb {
+  background-color: #797979;
+  border-radius: 20px;
+}
+
+.root > main::-webkit-scrollbar-track,
+.bodyAside::-webkit-scrollbar-track {
+  width: 5px;
+  border-radius: 5px;
+}
+
+.productos::-webkit-scrollbar {
+  height: 5px;
+  background-color: #252525;
+}
+
+.productos::-webkit-scrollbar-thumb {
+  background-color: #797979;
+  border-radius: 20px;
+}
+
 /* ----- CUERPO DE LA PÁGINA ----- */
 
 .root {
   display: flex;
   flex-direction: row;
   gap: 10px;
-  height: 100vh;
+  height: 100dvh;
   padding: 10px;
 }
 
@@ -62,6 +109,7 @@ aside {
 .bodyAside {
   height: 100%;
   gap: 10px;
+  overflow-y: scroll;
 }
 
 .bodyAside a {
@@ -77,6 +125,57 @@ aside {
   margin-top: 15px;
 }
 
+.contador {
+  background-color: rgb(5, 5, 5);
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 40px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.contador h3 {
+  text-align: center;
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
+.contador div {
+  background-color: #171720;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border-radius: 7px;
+}
+
+#inputCantidad {
+  background: none;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  height: 40px;
+  width: 80%;
+  font-size: 30px;
+  border: none;
+}
+
+.botonesContador {
+  color: rgb(255, 255, 255);
+  padding-inline: 40px;
+  font-size: 3rem;
+}
+
+.agregarCarrito {
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+}
+
+.cartWidget {
+  margin-top: 30px;
+}
+
 .cart {
   transition: .3s;
   width: 35px;
@@ -88,8 +187,6 @@ aside {
 
 .cartButton {
   position: relative;
-  background: none;
-  border: none;
   font-size: .9rem;
 }
 
@@ -113,21 +210,6 @@ aside {
   overflow-y: scroll;
 }
 
-.root > main::-webkit-scrollbar { /* Personalizo el scrollbar para navegadores con webkit */
-  -webkit-appearance: none;
-  width: 5px;
-}
-
-.root > main::-webkit-scrollbar-thumb {
-  background-color: #797979;
-  border-radius: 20px;
-}
-
-.root > main::-webkit-scrollbar-track {
-  width: 5px;
-  border-radius: 5px;
-}
-
 .titulos {
   margin-left: 20px;
 }
@@ -139,16 +221,6 @@ aside {
   margin-bottom: 50px;
   padding-bottom: 10px;
   overflow-x: scroll;
-}
-
-.productos::-webkit-scrollbar {
-  height: 5px;
-  background-color: #252525;
-}
-
-.productos::-webkit-scrollbar-thumb {
-  background-color: #797979;
-  border-radius: 20px;
 }
 
 .itemList {

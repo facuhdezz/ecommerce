@@ -1,6 +1,6 @@
 import Aside from "./components/Aside"
 import ItemListContainer from "./components/ItemListContainer"
-import Content from "./components/content"
+import Content from "./components/Content"
 
 function App() {
   return (

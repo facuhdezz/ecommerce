@@ -1,6 +1,6 @@
-import Logo from "../assets/netshop-text-light.svg"
-import Search from "../assets/search.svg"
-import Home from "../assets/home.svg"
+import Logo from "../assets/netshop-text-light.svg";
+import Search from "../assets/search.svg";
+import Home from "../assets/home.svg";
 
 const AsideCab = () => {
     return (

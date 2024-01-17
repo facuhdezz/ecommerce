@@ -18,7 +18,8 @@
             "Peso": "2.2 kg",
             "Color": "Mecha Grey",
             "Garantía": "1 año"
-        }
+        },
+        "stock": "7"
     },
     {
         "id": 2,
@@ -39,7 +40,8 @@
             "Peso": "2.2 kg",
             "Color": "Mecha Grey",
             "Garantía": "1 año"
-        }
+        },
+        "stock": "3"
     },
     {
         "id": 3,
@@ -57,7 +59,8 @@
             "Sistema Operativo": "Windows 11 Pro",
             "Color": "Plata",
             "Garantía": "1 año"
-        }
+        },
+        "stock": "20"
     },
     {
         "id": 4,
@@ -78,7 +81,8 @@
             "Peso": "1.7 kg",
             "Color": "Quiet Blue",
             "Garantía": "1 año"
-        }
+        },
+        "stock": "25"
     },
     {
         "id": 5,
@@ -99,7 +103,8 @@
             "Peso": "1.6 kg",
             "Color": "Plata",
             "Garantía": "1 año"
-        }
+        },
+        "stock": "11"
     },
     {
         "id": 6,
@@ -120,7 +125,8 @@
             "Peso": "2.42 kg",
             "Color": "Shadow Black",
             "Garantía": "1 año"
-        }
+        },
+        "stock": "13"
     },
     {
         "id": 7,
@@ -141,7 +147,8 @@
             "Peso": "2.2 kg",
             "Color": "Mica Silver",
             "Garantía": "1 año"
-        }
+        },
+        "stock": "17"
     },
     {
         "id": 8,
@@ -182,7 +189,8 @@
             "Peso": "1.51 kg",
             "Color": "Negro (midnight)",
             "Garantía": "1 año"
-        }
+        },
+        "stock": "6"
     },
     {
         "id": 10,
@@ -203,6 +211,7 @@
             "Peso": "1.37 kg",
             "Color": "Plateado",
             "Garantía": "1 año"
-        }
+        },
+        "stock": "4"
     }
 ]
