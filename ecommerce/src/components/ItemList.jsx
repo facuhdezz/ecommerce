@@ -1,20 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import productosDestacados from "./productosDestacados";
 import productos from "./productos";
 import Item from "./Item";
 
 const ItemList = () => {
     const [productList, setProductList] = useState([]);
+    const {id} = useParams();
 
-    console.log(productos)
+useEffect(() => {
     const promesa = new Promise((resolve) => {
+        let productsToAppend = id ? productos.filter(product => product.category == id) : productosDestacados;
         setTimeout(() => {
-            resolve(productos);
+            resolve(productsToAppend);
         }, 2000)
     });
 
     promesa.then(data => {
         setProductList(data)
     })
+}, [id])
 
     return (
         <div className="d-inline-flex gap-3 itemList">

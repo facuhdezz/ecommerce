@@ -1,18 +1,24 @@
-import Aside from "./components/Aside"
+import NavBar from "./components/NavBar"
 import ItemListContainer from "./components/ItemListContainer"
-import Content from "./components/Content"
+import { Link, Routes, Route } from "react-router-dom"
+import Content from "./components/complementos/Content"
 
 function App() {
   return (
     <>
       <aside>
-        <Aside />
+        <NavBar />
       </aside>
       <main>
-        <h1 className="titulos" id="destacados">Destacados</h1>
-        <ItemListContainer greeting={"La página actualmente se encuentra en desarrollo!"}></ItemListContainer>
-        <h1 className="titulos">Descubrí</h1>
-        <Content />
+        <Routes>
+          <Route path={"/"} element={            
+              <>
+                <ItemListContainer />
+                <Content />
+              </>            
+          } />
+          <Route path={"/category/:id"} element={<ItemListContainer />} />
+        </Routes>
       </main>
     </>
   )

@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "img": "./imagenes/asus-tuf-FX507ZI-15-6.jpg",
+        "img": "https://live.staticflickr.com/65535/53471116753_dffe6e7d08_m.jpg",
         "nombre": "Notebook ASUS TUF FX507ZI 15.6″ FHD 144Hz i7 12va Gen. 16GB/1TB RTX4070 8GB",
         "precio": 2397,
         "moneda": "USD",
@@ -19,11 +19,11 @@
             "Color": "Mecha Grey",
             "Garantía": "1 año"
         },
-        "stock": "7"
+        "stock": "5"
     },
     {
         "id": 2,
-        "img": "./imagenes/lenovo-3-15-6.jpg",
+        "img": "https://live.staticflickr.com/65535/53471397490_316220c6d0_m.jpg",
         "nombre": "Notebook LENOVO 3 15IT 15.6″ FHD, i5 11va Gen. 8GB/512GB, Intel Iris Xe Win 11",
         "precio": 697,
         "moneda": "USD",
@@ -41,11 +41,11 @@
             "Color": "Mecha Grey",
             "Garantía": "1 año"
         },
-        "stock": "3"
+        "stock": "14"
     },
     {
         "id": 3,
-        "img": "./imagenes/kuu-xbook-14-1.jpg",
+        "img": "https://combo.staticflickr.com/pw/images/editr-placeholder-container.png",
         "nombre": "Notebook KUU XBook 14.1″ Intel Celeron 256GB 8GB W11 Pro",
         "precio": 367,
         "moneda": "USD",
@@ -60,11 +60,11 @@
             "Color": "Plata",
             "Garantía": "1 año"
         },
-        "stock": "20"
+        "stock": "16"
     },
     {
         "id": 4,
-        "img": "./imagenes/asus-vivobook-F1502-15-6.jpg",
+        "img": "https://live.staticflickr.com/65535/53471293654_188a965a4c_m.jpg",
         "nombre": "Notebook ASUS Vivobook F1502 15.6″ FHD Táctil i7 12va Gen. 512GB 16GB Iris Xe Win 11",
         "precio": 1097,
         "moneda": "USD",
@@ -82,11 +82,11 @@
             "Color": "Quiet Blue",
             "Garantía": "1 año"
         },
-        "stock": "25"
+        "stock": "9"
     },
     {
         "id": 5,
-        "img": "./imagenes/asus-vivobook-X1400-14-0.png",
+        "img": "https://live.staticflickr.com/65535/53470075522_03264e4c6d_m.jpg",
         "nombre": "Notebook ASUS Vivobook X1400 14″ i3 11va 8GB 128GB SSD Win 11 Home",
         "precio": 497,
         "moneda": "USD",
@@ -104,11 +104,11 @@
             "Color": "Plata",
             "Garantía": "1 año"
         },
-        "stock": "11"
+        "stock": "17"
     },
     {
         "id": 6,
-        "img": "./imagenes/hp-omen-16-1.jpg",
+        "img": "https://live.staticflickr.com/65535/53471119368_e2a7e1bc3a_m.jpg",
         "nombre": "Notebook HP OMEN 16.1″ QHD i9 12va 1TB SSD 16GB Win 11 H",
         "precio": 2297,
         "moneda": "USD",
@@ -126,11 +126,11 @@
             "Color": "Shadow Black",
             "Garantía": "1 año"
         },
-        "stock": "13"
+        "stock": "8"
     },
     {
         "id": 7,
-        "img": "./imagenes/hp-victus-15-6.jpg",
+        "img": "https://live.staticflickr.com/65535/53470977266_921087100a_m.jpg",
         "nombre": "Notebook HP Victus Gaming 15.6″ 144Hz Ryzen 7 512GB SSD 16GB RTX3050Ti Win 11",
         "precio": 1597,
         "moneda": "USD",
@@ -148,7 +148,7 @@
             "Color": "Mica Silver",
             "Garantía": "1 año"
         },
-        "stock": "17"
+        "stock": "12"
     },
     {
         "id": 8,
@@ -169,11 +169,12 @@
             "Peso": "1.86 kg",
             "Color": "Negro",
             "Garantía": "1 año"
-        }
+        },
+        "stock": "10"
     },
     {
         "id": 9,
-        "img": "./imagenes/macbook-air-15-3.jpg",
+        "img": "https://live.staticflickr.com/65535/53471119358_9c5f13e506_m.jpg",
         "nombre": "APPLE MacBook Air MQKW3LL/A 15.3″ M2 8GB 256GB PCS",
         "precio": 2113,
         "moneda": "USD",
@@ -190,11 +191,11 @@
             "Color": "Negro (midnight)",
             "Garantía": "1 año"
         },
-        "stock": "6"
+        "stock": "5"
     },
     {
         "id": 10,
-        "img": "./imagenes/macbook-pro-13-3.jpg",
+        "img": "https://live.staticflickr.com/65535/53471293629_361e2b620b_m.jpg",
         "nombre": "APPLE MacBook PRO MPXU2LL/A 13.3 Retina Intel i5 8GB 256GB OUTLET PCS",
         "precio": 899,
         "moneda": "USD",
@@ -212,6 +213,6 @@
             "Color": "Plateado",
             "Garantía": "1 año"
         },
-        "stock": "4"
+        "stock": "7"
     }
 ]

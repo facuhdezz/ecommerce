@@ -1,0 +1,86 @@
+[
+    {
+        "id": 2001,
+        "img": "./imagenes/MX600RGB-01-w-550x550.jpg",
+        "nombre": "Gabinete Cougar MX600 RGB",
+        "precio": 97,
+        "moneda": "USD",
+        "marca": "Cougar",
+        "características": [
+            "Capacidad máxima de 9 fans.",
+            "Dimensiones: 23,5 x 51,5 x 47,8 (cm)",
+            "Placas base: Mini ITX / Micro ATX / ATX / CEB / E-ATX"
+        ],
+        "stock": "8"
+    },
+    {
+        "id": 2002,
+        "img": "./imagenes/05-3.jpg",
+        "nombre": "Gabinete Cougar DarkBlader-G",
+        "precio": 110,
+        "moneda": "USD",
+        "marca": "Cougar",
+        "características": [
+            "Capacidad máxima de 7 fans",
+            "Dimensiones: 23,2 x 52,3 x 51,8 (cm)",
+            "Placas base: Mini ITX / Micro ATX / ATX / CEB / **E-ATX"
+        ],
+        "stock": "4"
+    },
+    {
+        "id": 2003,
+        "img": "./imagenes/products_panzerevo_rgb-263x300.png",
+        "nombre": "Gabinete Cougar PANZER EVO RGB ",
+        "precio": 80,
+        "moneda": "USD",
+        "marca": "Cougar",
+        "características": [
+            "Capacidad máxima de 8 fans",
+            "Dimensiones: 26,6 x 61,2 x 55,6 (cm)",
+            "Placas base: Mini ITX / Micro ATX / ATX / CEB / E-ATX ( E-ATX up to 12x11″ )"
+        ],
+        "stock": "5"
+    },
+    {
+        "id": 2004,
+        "img": "./imagenes/UNIFACE-RGB-01-2-550x550.jpg",
+        "nombre": "Gabinete Cougar Uniface RGB",
+        "precio": 75,
+        "moneda": "USD",
+        "marca": "Cougar",
+        "características": [
+            "Capacidad máxima de 9 fans",
+            "Dimensiones: 23,0 x 49,3 x 47,5 (cm)",
+            "Placas base: Mini ITX / Micro ATX / ATX / CEB / E-ATX"
+        ],
+        "stock": "13"
+    },
+    {
+        "id": 2005,
+        "img": "./imagenes/02-3.png",
+        "nombre": "Gabinete Cougar MX330-G Air",
+        "precio": 83,
+        "moneda": "USD",
+        "marca": "Cougar",
+        "características": [
+            "Capacidad máxima de 5 fans",
+            "Dimensiones: 19,5 x 47,3 x 42,7 (cm)",
+            "Placas base: Mini-ITX/Micro ATX/ATX"
+        ],
+        "stock": "12"
+    },
+    {
+        "id": 2006,
+        "img": "./imagenes/products_darkBlader_x7_green.png",
+        "nombre": "Gabinete Cougar DarkBlader-X7",
+        "precio": 85,
+        "moneda": "USD",
+        "marca": "Cougar",
+        "características": [
+            "Capacidad máxima de 7 fans",
+            "Dimensiones: 22,0 x 48,6 x 46,8 (cm)",
+            "Mini ITX / Micro ATX / ATX / CEB / E-ATX"
+        ],
+        "stock": "9"
+    }
+]

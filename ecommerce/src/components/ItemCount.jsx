@@ -2,12 +2,10 @@ import { useEffect, useState } from "react";
 
 const ItemCount = ({stock, initial}) => {
 
-    const [cantidad, setCantidad] = useState(initial);
+    const [cantidad, setCantidad] = useState(parseInt(initial));
 
     const incrementar = () => {
-        let input = document.getElementById("inputCantidad");
-        let max = input.getAttribute("max");
-        if (cantidad < max) {
+        if (cantidad < stock) {
             setCantidad(cantidad + 1);
         } else {
             alert('No hay más cantidad disponible');
@@ -15,26 +13,21 @@ const ItemCount = ({stock, initial}) => {
     }
 
     const decrementar = () => {
-        let input = document.getElementById("inputCantidad");
-        let min = input.getAttribute("min");
-        if (cantidad > min) {
+        if (cantidad > 1) {
             setCantidad(cantidad - 1);
         }
     }
 
-    useEffect(() => {
-        let input = document.getElementById("inputCantidad");
-        input.setAttribute("value", cantidad);
-        localStorage.setItem('initial', cantidad);
-    }, [cantidad])
+    useEffect(() => {localStorage.setItem("initial", cantidad)}, [cantidad])
 
     return (
         <>
             <div className="contador">
                 <h3>Producto</h3>
-                <div>
+                <div className="cantidad">
                     <button id="decrementar" className="botonesContador" onClick={decrementar}> - </button>
-                    <input id="inputCantidad" type="number" min={0} max={stock} value={cantidad} readOnly />
+                    {/* <input id="inputCantidad" type="number" min={1} max={stock} value={cantidad} readOnly /> */}
+                    <p>{cantidad}</p>
                     <button id="incrementar" className="botonesContador" onClick={incrementar}>+</button>
                 </div>
                 <div>

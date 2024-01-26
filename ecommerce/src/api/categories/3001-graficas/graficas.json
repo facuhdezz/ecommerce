@@ -1,0 +1,141 @@
+[
+    {
+        "id": 3001,
+        "img": "./imagenes/gt1030.jpg",
+        "nombre": "Nvidia GeForce GT 1030",
+        "precio": 110,
+        "moneda": "USD",
+        "marca": "Gigabyte",
+        "fabricante": "Nvidia",
+        "características": {
+            "Memoria": "2GB DDR4",
+            "Frecuencia": "1417 MHz"
+        },
+        "stock": "8"
+    },
+    {
+        "id": 3002,
+        "img": "./imagenes/gtx1050.jpg",
+        "nombre": "Nvidia GeForce GTX 1050 Ti",
+        "precio": 280,
+        "moneda": "USD",
+        "marca": "Asus",
+        "fabricante": "Nvidia",
+        "características": {
+            "Memoria": "4GB DDR5",
+            "Frecuencia": "1290 MHz"
+        },
+        "stock": "17"
+    },
+    {
+        "id": 3003,
+        "img": "./imagenes/gtx1660.jpg",
+        "nombre": "Nvidia GeForce GTX 1660 Super",
+        "precio": 367,
+        "moneda": "USD",
+        "marca": "Zotac",
+        "fabricante": "Nvidia",
+        "características": {
+            "Memoria": "6GB GDDR6",
+            "Frecuencia": "1785 MHz"
+        },
+        "stock": "15"
+    },
+    {
+        "id": 3004,
+        "img": "./imagenes/rtx3060.jpg",
+        "nombre": "Nvidia GeForce RTX 3060",
+        "precio": 420,
+        "moneda": "USD",
+        "marca": "Msi",
+        "fabricante": "Nvidia",
+        "características": {
+            "Memoria": "12GB GDDR6",
+            "Frecuencia": "1710 MHz"
+        },
+        "stock": "12"
+    },
+    {
+        "id": 3005,
+        "img": "./imagenes/rtx4090.jpg",
+        "nombre": "Nvidia GeForce RTX 4090",
+        "precio": 2600,
+        "moneda": "USD",
+        "marca": "Asus",
+        "fabricante": "Nvidia",
+        "características": {
+            "Memoria": "24GB GDDR6X",
+            "Frecuencia": "2595 MHz"
+        },
+        "stock": "7"
+    },
+    {
+        "id": 3006,
+        "img": "./imagenes/rx580.jpg",
+        "nombre": "AMD Radeon RX 580",
+        "precio": 150,
+        "moneda": "USD",
+        "marca": "XFX",
+        "fabricante": "AMD",
+        "características": {
+            "Memoria": "8GB GDDR5",
+            "Frecuencia": "1386 MHz"
+        },
+        "stock": "4"
+    },
+    {
+        "id": 3007,
+        "img": "./imagenes/rx6600.jpg",
+        "nombre": "AMD Radeon RX 6600 XT",
+        "precio": 250,
+        "moneda": "USD",
+        "marca": "Asrock",
+        "fabricante": "AMD",
+        "características": {
+            "Memoria": "8GB GDDR5",
+            "Frecuencia": "1850 MHz"
+        },
+        "stock": "12"
+    },
+    {
+        "id": 3008,
+        "img": "./imagenes/rx7800.jpg",
+        "nombre": "MD Radeon RX 7800 XT",
+        "precio": 620,
+        "moneda": "USD",
+        "marca": "Sapphire",
+        "fabricante": "AMD",
+        "características": {
+            "Memoria": "16GB GDDR6",
+            "Frecuencia": "2254 MHz"
+        },
+        "stock": "6"
+    },
+    {
+        "id": 3009,
+        "img": "./imagenes/rx6900.jpg",
+        "nombre": "AMD Radeon RX 6900 XT Master",
+        "precio": 1200,
+        "moneda": "USD",
+        "marca": "Gigabyte",
+        "fabricante": "AMD",
+        "características": {
+            "Memoria": "16GB GDDR6",
+            "Frecuencia": "2448 MHz"
+        },
+        "stock": "3"
+    },
+    {
+        "id": 3010,
+        "img": "./imagenes/rtx5000.jpg",
+        "nombre": "NVIDIA Quadro RTX 5000 ",
+        "precio": 950,
+        "moneda": "USD",
+        "marca": "Pny",
+        "fabricante": "Nvidia",
+        "características": {
+            "Memoria": "16GB GDDR6"
+        },
+        "stock": "1"
+    }
+]

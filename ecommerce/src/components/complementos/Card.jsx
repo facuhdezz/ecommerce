@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
-const Card = ({ img, description, id }) => {
+const Card = ({ img, description, id, link }) => {
     const [mostrar, setMostrar] = useState("none") 
 
     const hoverImg = () => {
@@ -14,7 +15,7 @@ const Card = ({ img, description, id }) => {
 
     return (
         <div id={id} onMouseEnter={hoverImg} onMouseLeave={hoverImg}> {/* Utilizo onMouseEnter y onMouseOver para ejecutar la funcion hoverImg al pasar el mouse por encima del div */}
-            <img src={img} alt={description}/>
+            <Link to={"/category/" + link}><img src={img} alt={description}/></Link>
             <div className="tituloCat">
                 <h1 id={"titulo"+id}>{description}</h1>
             </div>

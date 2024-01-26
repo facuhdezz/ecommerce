@@ -1,10 +1,13 @@
 import ItemList from "./ItemList";
 
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = () => {
     return (
-        <section className="productos">
-            <ItemList />
-        </section>
+        <>
+            <section className="productos">
+                <h1 className="titulos" id="destacados">Destacados</h1>
+                <ItemList />
+            </section>
+        </>
     )
 }
 
