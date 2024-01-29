@@ -18,15 +18,14 @@ const ItemCount = ({stock, initial}) => {
         }
     }
 
-    useEffect(() => {localStorage.setItem("initial", cantidad)}, [cantidad])
+    useEffect(() => {localStorage.setItem("initial", cantidad)}, [cantidad]);
 
     return (
         <>
             <div className="contador">
-                <h3>Producto</h3>
+                <h3>Cantidad</h3>
                 <div className="cantidad">
                     <button id="decrementar" className="botonesContador" onClick={decrementar}> - </button>
-                    {/* <input id="inputCantidad" type="number" min={1} max={stock} value={cantidad} readOnly /> */}
                     <p>{cantidad}</p>
                     <button id="incrementar" className="botonesContador" onClick={incrementar}>+</button>
                 </div>

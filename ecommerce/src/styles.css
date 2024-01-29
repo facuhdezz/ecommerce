@@ -3,6 +3,13 @@
 
 /* ------      ESTILOS GENERALES      ------ */
 
+/* Fuentes */
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap');
+/* font-family: 'Kanit', sans-serif; */
+
+/**/
+
 *{
   scroll-behavior: smooth;
   box-sizing: border-box;
@@ -37,11 +44,6 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-
-input[type=number] {
-  -moz-appearance: textfield;
-  appearance: textfield;
 }
 
 .root > main::-webkit-scrollbar,
@@ -226,15 +228,26 @@ aside {
 
 .titulos {
   margin-left: 20px;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-family: 'Kanit', sans-serif;
 }
 
 /* ----- Sección de productos destacados ----- */
 
-.productos {
+.productosDestacados {
   width: 100%;
-  margin-bottom: 50px;
   padding-bottom: 10px;
   overflow-x: scroll;
+}
+
+/* ----- Sección de productos ----- */
+
+.producto {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .itemList {
@@ -243,10 +256,17 @@ aside {
 
 .card {
   background-color: #252525;
-  width: 200px;
   border: none;
   box-shadow: 0 0 10px 5px black;
   padding: 5px;
+}
+
+.cardDest {
+  width: 200px;
+}
+
+.cardProducts {
+  width: 300px;
 }
 
 .card-body {
@@ -262,7 +282,69 @@ aside {
   background-color: white;
 }
 
+.card button {
+  background-color:#171720;
+  color: rgb(218, 218, 218);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.card button:hover {
+  background-color: #252531;
+}
+
+/* ----- Detalle del producto ----- */
+
+.productDetail {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 75px;
+  padding: 10px;
+}
+
+.productDetail .description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.productDetail .description h2 {
+  font-size: 3rem;
+}
+
+.productDetail .description h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.productDetail .description ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+.productDetail .description li {
+  font-size: 1.2rem;
+}
+
+.imgProducto {
+  width: 600px;
+  height: 100%;
+  border-radius: 20px;
+}
+
 /* ---- Grilla ---- */
+
+.categorias {
+  margin-top: 75px;
+}
 
 .grid {
   display: grid;

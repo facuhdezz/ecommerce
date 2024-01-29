@@ -1,32 +1,36 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import productosDestacados from "./productosDestacados";
 import productos from "./productos";
 import Item from "./Item";
+import { useParams } from "react-router-dom";
 
-const ItemList = () => {
+const ItemList = ({idCat}) => {
     const [productList, setProductList] = useState([]);
-    const {id} = useParams();
+    const { id } = useParams();
 
-useEffect(() => {
-    const promesa = new Promise((resolve) => {
-        let productsToAppend = id ? productos.filter(product => product.category == id) : productosDestacados;
-        setTimeout(() => {
-            resolve(productsToAppend);
-        }, 2000)
-    });
+    useEffect(() => {
+        const promesa = new Promise((resolve) => {
+            let productsToAppend = productos.filter(product => (product.category == id || product.category == idCat));
+            setTimeout(() => {
+                resolve(productsToAppend);
+            }, 2000);
+        });
 
-    promesa.then(data => {
-        setProductList(data)
-    })
-}, [id])
+        promesa.then(data => {
+            setProductList(data)
+        });
+    }, [id]);
 
     return (
-        <div className="d-inline-flex gap-3 itemList">
-            {productList.map(product => (
-                <Item key={product.id} img={product.img} nombre={product.nombre} precio={product.precio} moneda={product.moneda} marca={product.marca} />
-            ))}
-        </div>
+        <>
+            <h1 className="titulos" id="products">{productList[0] && productList[0].category}</h1>
+            <section className="productosCat">
+                <div className="itemList producto">
+                    {productList.map(product => (
+                        <Item clase={"card cardProducts"} link={product.id} key={product.id} img={product.img} nombre={product.nombre} precio={product.precio} moneda={product.moneda} marca={product.marca} />
+                    ))}
+                </div>
+            </section>
+        </>
     )
 }
 

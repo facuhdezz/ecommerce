@@ -1,12 +1,11 @@
 import ItemList from "./ItemList";
+import Content from "./complementos/Content";
 
 const ItemListContainer = () => {
     return (
         <>
-            <section className="productos">
-                <h1 className="titulos" id="destacados">Destacados</h1>
-                <ItemList />
-            </section>
+            <ItemList />
+            <Content />
         </>
     )
 }

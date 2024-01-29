@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import CartWidget from "../CartWidget";
 import ItemCount from "../ItemCount";
 
@@ -8,13 +8,17 @@ const AsideBody = () => {
     return (
         <>
             <article className="bodyAside">
-                <ItemCount stock={10} initial={initial} />
-                <Link className="linkAside" to={"/"}>+ Componentes</Link> 
-                <Link className="linkAside" to={"/"}>+ Equipos</Link> 
+                <Routes>
+                    <Route path={"/item/:id"} element={<ItemCount stock={10} initial={initial} />} />
+                </Routes>                
+                <Link className="linkAside" to={"/category/procesadores"}>+ Procesadores</Link> 
+                <Link className="linkAside" to={"/category/graficas"}>+ Gráficas</Link>
+                <Link className="linkAside" to={"/category/gabinetes"}>+ Gabinetes</Link> 
+                <Link className="linkAside" to={"/category/equipos"}>+ Equipos</Link> 
                 <Link className="linkAside" to={"/category/monitores"}>+ Monitores</Link> 
                 <Link className="linkAside" to={"/category/laptops"}>+ Laptops</Link> 
-                <Link className="linkAside" to={"/"}>+ Periféricos</Link> 
-                <Link className="linkAside" to={"/"}>+ Consolas</Link> 
+                <Link className="linkAside" to={"/category/perifericos"}>+ Periféricos</Link> 
+                <Link className="linkAside" to={"/category/ram"}>+ Memorias Ram</Link> 
                 <CartWidget />
             </article>
         </>
