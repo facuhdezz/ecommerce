@@ -1,0 +1,218 @@
+[
+    {
+        "id": 1,
+        "img": "https://live.staticflickr.com/65535/53471116753_dffe6e7d08_m.jpg",
+        "nombre": "Notebook ASUS TUF FX507ZI 15.6″ FHD 144Hz i7 12va Gen. 16GB/1TB RTX4070 8GB",
+        "precio": 2397,
+        "moneda": "USD",
+        "marca": "ASUS",
+        "características": {
+            "Pantalla": "15.6” FHD con retroiluminación LED 144 Hz (1920 x 1080 px)",
+            "Procesador": "Intel Core i7-12700H 12va Generación 2.3 GHz - 4.7 GHz (Turbo Boost)",
+            "Memoria RAM": "16GB DDR4",
+            "Almacenamiento": "1TB SSD",
+            "Tarjeta Gráfica": "NVIDIA GeForce RTX 4070 8GB DDR6",
+            "Sistema Operativo": "Windows 11 Home",
+            "Batería": "Ion de litio 4 celdas 90 Wh",
+            "Dimensiones": "35.4 x 25.1 x 2.24 cm",
+            "Peso": "2.2 kg",
+            "Color": "Mecha Grey",
+            "Garantía": "1 año"
+        },
+        "stock": "5"
+    },
+    {
+        "id": 2,
+        "img": "https://live.staticflickr.com/65535/53471397490_316220c6d0_m.jpg",
+        "nombre": "Notebook LENOVO 3 15IT 15.6″ FHD, i5 11va Gen. 8GB/512GB, Intel Iris Xe Win 11",
+        "precio": 697,
+        "moneda": "USD",
+        "marca": "LENOVO",
+        "características": {
+            "Pantalla": "15.6” FHD Táctil con retroiluminación LED (1920 x 1080 px)",
+            "Procesador": "Intel Core i5-1135G7 11va Generación 2.4 GHz - 4.2 GHz (Turbo Boost)",
+            "Memoria RAM": "8GB DDR4",
+            "Almacenamiento": "512GB SSD",
+            "Tarjeta Gráfica": "NVIDIA GeForce RTX 4070 8GB DDR6",
+            "Sistema Operativo": "Windows 11 Home",
+            "Batería": "Ion de litio 4 celdas 90 Wh",
+            "Dimensiones": "35.4 x 25.1 x 2.24 cm",
+            "Peso": "2.2 kg",
+            "Color": "Mecha Grey",
+            "Garantía": "1 año"
+        },
+        "stock": "14"
+    },
+    {
+        "id": 3,
+        "img": "https://combo.staticflickr.com/pw/images/editr-placeholder-container.png",
+        "nombre": "Notebook KUU XBook 14.1″ Intel Celeron 256GB 8GB W11 Pro",
+        "precio": 367,
+        "moneda": "USD",
+        "marca": "KUU",
+        "características": {
+            "Pantalla": "14.1” FHD con retroiluminación LED (1920 x 1080 px)",
+            "Procesador": "Intel Celeron Quad Core J4105 1.5 GHz - 2.5 GHz (Turbo Boost)",
+            "Memoria RAM": "8GB",
+            "Almacenamiento": "256GB SSD",
+            "Tarjeta Gráfica": "Intel UHD Graphics",
+            "Sistema Operativo": "Windows 11 Pro",
+            "Color": "Plata",
+            "Garantía": "1 año"
+        },
+        "stock": "16"
+    },
+    {
+        "id": 4,
+        "img": "https://live.staticflickr.com/65535/53471293654_188a965a4c_m.jpg",
+        "nombre": "Notebook ASUS Vivobook F1502 15.6″ FHD Táctil i7 12va Gen. 512GB 16GB Iris Xe Win 11",
+        "precio": 1097,
+        "moneda": "USD",
+        "marca": "ASUS",
+        "características": {
+            "Pantalla": "15.6” FHD Táctil con retroiluminación LED (1920 x 1080 px)",
+            "Procesador": "Intel Core i7-1255U 12va Generación 3.5 GHz – 4.7 GHz (Turbo Boost)",
+            "Memoria RAM": "16GB DDR4",
+            "Almacenamiento": "512GB SSD",
+            "Tarjeta Gráfica": "Intel Iris Xe Graphics",
+            "Sistema Operativo": "Windows 11",
+            "Batería": "Ion de litio 3 Celdas 42Wh",
+            "Dimensiones": "35.9 x 23.2 x 1.9 cm",
+            "Peso": "1.7 kg",
+            "Color": "Quiet Blue",
+            "Garantía": "1 año"
+        },
+        "stock": "9"
+    },
+    {
+        "id": 5,
+        "img": "https://live.staticflickr.com/65535/53470075522_03264e4c6d_m.jpg",
+        "nombre": "Notebook ASUS Vivobook X1400 14″ i3 11va 8GB 128GB SSD Win 11 Home",
+        "precio": 497,
+        "moneda": "USD",
+        "marca": "ASUS",
+        "características": {
+            "Pantalla": "14” HD con retroiluminación LED (1366 x 768px)",
+            "Procesador": "Intel Core i3-1115G4  2.4GHz – 4.2GHz (Turbo boost)",
+            "Memoria RAM": "8GB DDR4",
+            "Almacenamiento": "128 GB SSD M.2",
+            "Tarjeta Gráfica": "Intel UHD Graphics",
+            "Sistema Operativo": "Windows 11 Home",
+            "Batería": "2 Celdas 37w",
+            "Dimensiones": "32.54 x 21.60 x 1.99 cm",
+            "Peso": "1.6 kg",
+            "Color": "Plata",
+            "Garantía": "1 año"
+        },
+        "stock": "17"
+    },
+    {
+        "id": 6,
+        "img": "https://live.staticflickr.com/65535/53471119368_e2a7e1bc3a_m.jpg",
+        "nombre": "Notebook HP OMEN 16.1″ QHD i9 12va 1TB SSD 16GB Win 11 H",
+        "precio": 2297,
+        "moneda": "USD",
+        "marca": "HP",
+        "características": {
+            "Pantalla": "IPS LED 16.1″ QHD 2560 x 1440 165Hz",
+            "Procesador": "Intel Core i9-12900H 3.8GHz – 5.0Ghz (Turbo Boost)",
+            "Memoria RAM": "16GB DDR5 4800MHz",
+            "Almacenamiento": "1TB SSD",
+            "Tarjeta Gráfica": "NVIDIA GeForce RTX 3060 con 6GB GDDR6",
+            "Sistema Operativo": "Windows 11 Home",
+            "Batería": "4 celdas 70WHr litio ion",
+            "Dimensiones": "36.9 x 24.8 x 2.3 cm",
+            "Peso": "2.42 kg",
+            "Color": "Shadow Black",
+            "Garantía": "1 año"
+        },
+        "stock": "8"
+    },
+    {
+        "id": 7,
+        "img": "https://live.staticflickr.com/65535/53470977266_921087100a_m.jpg",
+        "nombre": "Notebook HP Victus Gaming 15.6″ 144Hz Ryzen 7 512GB SSD 16GB RTX3050Ti Win 11",
+        "precio": 1597,
+        "moneda": "USD",
+        "marca": "HP",
+        "características": {
+            "Pantalla": "15.6” FHD con retroiluminación LED 144hZ (1920 x 1080 px)",
+            "Procesador": "AMD Ryzen 7-5800H 3.2 GHz – 4.4 GHz (Turbo Boost)",
+            "Memoria RAM": "16GB DDR4",
+            "Almacenamiento": "512GB SSD",
+            "Tarjeta Gráfica": "NVIDIA GeForce RTX 3050Ti 4096MB",
+            "Sistema Operativo": "Windows 11",
+            "Batería": "Polímero de litio",
+            "Dimensiones": "35.7 x 25.5 x 2.3 cm",
+            "Peso": "2.2 kg",
+            "Color": "Mica Silver",
+            "Garantía": "1 año"
+        },
+        "stock": "12"
+    },
+    {
+        "id": 8,
+        "img": "./imagenes/msi-thin-15-6.jpg",
+        "nombre": "Notebook MSI THIN GF63 15.6″ FHD 8GB 512GB RTX4050 Win 11",
+        "precio": 1509,
+        "moneda": "USD",
+        "marca": "MSI",
+        "características": {
+            "Pantalla": "15.6” FHD IPS (1920 x 1080 px)",
+            "Procesador": "Intel Core i5-12450H 12va Generación 3.3 GHz – 4.0GHz (Turbo Boost)",
+            "Memoria RAM": "8GB",
+            "Almacenamiento": "512GB SSD",
+            "Tarjeta Gráfica": "NVIDIA GeForce RTX 4050 GDDR6 6GB",
+            "Sistema Operativo": "Windows 11",
+            "Batería": "3 Celdas 52.4 Whr",
+            "Dimensiones": "35.9 x 25.4 x 2.1 cm",
+            "Peso": "1.86 kg",
+            "Color": "Negro",
+            "Garantía": "1 año"
+        },
+        "stock": "10"
+    },
+    {
+        "id": 9,
+        "img": "https://live.staticflickr.com/65535/53471119358_9c5f13e506_m.jpg",
+        "nombre": "APPLE MacBook Air MQKW3LL/A 15.3″ M2 8GB 256GB PCS",
+        "precio": 2113,
+        "moneda": "USD",
+        "marca": "MSI",
+        "características": {
+            "Pantalla": "15.3” LIQUID RETINA IPS LED, 2880 x 1864 píxeles",
+            "Procesador": "Chip M2 8 CORE",
+            "Memoria RAM": "8GB",
+            "Almacenamiento": "256GB SSD",
+            "Sistema Operativo": "MAC",
+            "Batería": "LI-PO 66.5 Wh",
+            "Dimensiones": "34 x 23.8 x 1.2 cm",
+            "Peso": "1.51 kg",
+            "Color": "Negro (midnight)",
+            "Garantía": "1 año"
+        },
+        "stock": "5"
+    },
+    {
+        "id": 10,
+        "img": "https://live.staticflickr.com/65535/53471293629_361e2b620b_m.jpg",
+        "nombre": "APPLE MacBook PRO MPXU2LL/A 13.3 Retina Intel i5 8GB 256GB OUTLET PCS",
+        "precio": 899,
+        "moneda": "USD",
+        "marca": "MSI",
+        "características": {
+            "Pantalla": "13.3” RETINA IPS LED, 2560 x 1600 píxeles",
+            "Procesador": "Intel Core i5 7360U, 2,3 GHz – 3,6 GHz",
+            "Memoria RAM": "8GB LPDDR3",
+            "Almacenamiento": "256GB SSD",
+            "Tarjeta Gráfica": "Intel Iris Plus 640",
+            "Sistema Operativo": "MAC",
+            "Batería": "LI-PO 54.5 Wh",
+            "Dimensiones": "30.4 x 21.2 x 1.5 cm",
+            "Peso": "1.37 kg",
+            "Color": "Plateado",
+            "Garantía": "1 año"
+        },
+        "stock": "7"
+    }
+]

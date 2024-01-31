@@ -1,0 +1,86 @@
+[
+    {
+        "id": 4001,
+        "img": "./imagenes/acer24p.jpg",
+        "nombre": "Monitor LCD Acer 24” VGA",
+        "precio": 82,
+        "moneda": "USD",
+        "marca": "Acer",
+        "características": {
+            "Tamaño": "24 pulgadas panorámica",
+            "Resolución": "nativa 1920 x 1080",
+            "Tiempo de respuesta": "5ms"
+        },
+        "stock": "12"
+    },
+    {
+        "id": 4002,
+        "img": "./imagenes/perseo23-8p.jpg",
+        "nombre": "Monitor Perseo 23.8” Fhd 165 Hz",
+        "precio": 186,
+        "moneda": "USD",
+        "marca": "Perseo",
+        "características": {
+            "Tamaño": "23.8 pulgadas de area visible",
+            "Resolución": "1920 x 1080",
+            "Tiempo de respuesta": "1ms"
+        },
+        "stock": "7"
+    },
+    {
+        "id": 4003,
+        "img": "./imagenes/viewsonic27.jpg",
+        "nombre": "ViewSonic VA2747-MHJ - Monitor LED - 27” - 1920 x 1080 Full HD",
+        "precio": 240,
+        "moneda": "USD",
+        "marca": "ViewSonic",
+        "características": {
+            "Tamaño": "27 pulgadas",
+            "Resolución": "1920 x 1080 Full HD",
+            "Tiempo de respuesta": "5ms"
+        },
+        "stock": "5"
+    },
+    {
+        "id": 4004,
+        "img": "./imagenes/lenovo23-8.jpg",
+        "nombre": "MONITOR LENOVO THINKVISION P24Q-30 23.8” QHD",
+        "precio": 360,
+        "moneda": "USD",
+        "marca": "Lenovo",
+        "características": {
+            "Tamaño": "23.8 pulgadas de area visible",
+            "Resolución": "2560 x 1440",
+            "Tiempo de respuesta": "4ms"
+        },
+        "stock": "6"
+    },
+    {
+        "id": 4005,
+        "img": "./imagenes/samsung27.jpg",
+        "nombre": "Monitor Samsung G4 27” Full HD 240 Hz",
+        "precio": 476,
+        "moneda": "USD",
+        "marca": "Samsung",
+        "características": {
+            "Tamaño": "27 pulgadas",
+            "Resolución": "1920 x 1080",
+            "Tiempo de respuesta": "1ms"
+        },
+        "stock": "4"
+    },
+    {
+        "id": 4006,
+        "img": "./imagenes/msi34.jpg",
+        "nombre": "Monitor Gamer Curvo MSI Optix G32CQ4 | WQHD, 31.5”",
+        "precio": 785,
+        "moneda": "USD",
+        "marca": "Msi",
+        "características": {
+            "Tamaño": "34 pulgadas",
+            "Resolución": "2560 x 1440",
+            "Tiempo de respuesta": "1ms"
+        },
+        "stock": "2"
+    }
+]
