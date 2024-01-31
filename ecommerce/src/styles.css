@@ -16,15 +16,14 @@
 }
 
 body {
-  background: rgb(0,0,0);
-  background: linear-gradient(153deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(1,16,73,1) 70%, rgba(0,0,0,1) 90%, rgba(0,0,0,1) 100%);
+  background: var(--primer-background);
   background-attachment: fixed;
-  color: white;
+  color: var(--primer-color);
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color: var(--primer-color);
 }
 
 a:hover {
@@ -38,12 +37,6 @@ p, h1, h2, h3, h4, h5 {
 button {
   background: none;
   border: none;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
 }
 
 .root > main::-webkit-scrollbar,
@@ -74,6 +67,59 @@ input::-webkit-inner-spin-button {
   border-radius: 20px;
 }
 
+/* ---- Color Mode ---- */
+
+.btn-color {
+  transition: .1s ease-in;
+  position: fixed;
+  top: -30px;
+  right: -30px;
+  scale: 0.25;
+  z-index: 2;
+}
+
+.btn-color:hover {
+  scale: 0.28;
+}
+
+:root[data-theme="light"] .btn-darkmode, :root[data-theme="light"] .logo-light {
+  display: block;
+}
+
+:root[data-theme="light"] .btn-lightmode, :root[data-theme="light"] .logo-dark {
+  display: none;
+}
+
+:root[data-theme="dark"] .btn-darkmode, :root[data-theme="dark"] .logo-light {
+  display: none;
+}
+
+:root[data-theme="dark"] .btn-lightmode, :root[data-theme="dark"] .logo-dark {
+  display: block;
+}
+
+
+
+:root[data-theme="dark"] {
+  --primer-background: linear-gradient(153deg, rgba(0,0,10,1) 0%, rgba(0,0,10,1) 25%, rgba(1,16,73,1) 70%, rgba(0,0,10,1) 90%, rgba(0,0,10,1) 100%);
+  --segundo-background: #0e0e14;
+  --tercer-background: rgb(5, 5, 5);
+  --cuarto-background: #171720;
+  --card-background: #252525;
+  --primer-color: rgb(255, 255, 255);
+  --card-shadow: 0 0 10px 5px black;
+}
+
+:root[data-theme="light"] {
+  --primer-background: linear-gradient(153deg, rgb(235, 235, 255) 0%, rgb(235, 235, 255) 25%, rgba(1,16,73,1) 70%, rgb(235, 235, 255) 90%, rgb(235, 235, 255) 100%);
+  --segundo-background: #c7c7d4;
+  --tercer-background: rgb(250, 250, 250);
+  --cuarto-background: #e4e4f3;
+  --card-background: #d6d6d6;
+  --primer-color: rgb(0, 0, 0);
+  --card-shadow: 0 0 7px 2px rgb(121, 121, 121);
+}
+
 /* ----- CUERPO DE LA PÁGINA ----- */
 
 .root {
@@ -98,7 +144,7 @@ aside {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  background-color: #0e0e14;
+  background-color: var(--segundo-background);
   margin-right: 0;
   gap: 20px;
   padding: 30px;
@@ -130,8 +176,8 @@ aside {
 /* Contador (ItemCount) */
 
 .contador {
-  background-color: rgb(5, 5, 5);
-  color: rgb(255, 255, 255);
+  background-color: var(--tercer-background);
+  color: var(--primer-color);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -147,7 +193,7 @@ aside {
 }
 
 .contador div {
-  background-color: #171720;
+  background-color: var(--cuarto-background);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -157,7 +203,7 @@ aside {
 
 #inputCantidad {
   background: none;
-  color: rgb(255, 255, 255);
+  color: var(--primer-color);
   text-align: center;
   height: 40px;
   width: 80%;
@@ -171,7 +217,7 @@ aside {
 }
 
 .botonesContador {
-  color: rgb(255, 255, 255);
+  color: var(--primer-color);
   font-size: 3rem;
 }
 
@@ -180,7 +226,7 @@ aside {
 }
 
 .agregarCarrito {
-  color: rgb(255, 255, 255);
+  color: var(--primer-color);
   font-size: 1rem;
   width: 100%;
   height: 100%;
@@ -218,7 +264,7 @@ aside {
 /* ----- MAIN ----- */
 
 .root > main {
-  background-color: #0e0e14;
+  background-color: var(--segundo-background);
   width: 80vw;
   height: 100%;
   padding: 20px;
@@ -244,9 +290,11 @@ aside {
 /* ----- Sección de productos ----- */
 
 .producto {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  );
   gap: 20px;
 }
 
@@ -255,9 +303,9 @@ aside {
 }
 
 .card {
-  background-color: #252525;
+  background-color: var(--card-background);
   border: none;
-  box-shadow: 0 0 10px 5px black;
+  box-shadow: var(--card-shadow);
   padding: 5px;
 }
 
@@ -265,12 +313,8 @@ aside {
   width: 200px;
 }
 
-.cardProducts {
-  width: 300px;
-}
-
 .card-body {
-  color: white;
+  color: var(--primer-color);
   text-align: center;
 }
 
@@ -280,6 +324,15 @@ aside {
 
 .card img {
   background-color: white;
+  transition: .3s;
+}
+
+.card-img-conteiner {
+  overflow: hidden;
+}
+
+.card img:hover {
+  scale: 1.1;
 }
 
 .card button {
@@ -443,6 +496,13 @@ aside {
 /* ------    MEDIAS QUERY    ------ */
 
 @media (max-width: 1400px) {
+  .producto {    
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(25vw, 1fr)
+    );
+  }
+
   aside {
     width: 450px;
   }
@@ -457,10 +517,6 @@ aside {
 }
 
 @media (max-width: 1100px) {
-  .card {
-    width: 150px;
-  }
-
   aside {
     width: 450px;
   }

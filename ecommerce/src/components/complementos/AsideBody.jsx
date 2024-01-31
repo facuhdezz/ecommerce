@@ -11,7 +11,6 @@ const AsideBody = () => {
                 <Routes>
                     <Route path={"/item/:id"} element={<ItemCount stock={10} initial={initial} />} />
                 </Routes>                
-                <Link className="linkAside" to={"/category/procesadores"}>+ Procesadores</Link> 
                 <Link className="linkAside" to={"/category/graficas"}>+ Gráficas</Link>
                 <Link className="linkAside" to={"/category/gabinetes"}>+ Gabinetes</Link> 
                 <Link className="linkAside" to={"/category/equipos"}>+ Equipos</Link> 
@@ -25,4 +24,4 @@ const AsideBody = () => {
     )
 }
 
-export default AsideBody;
+export default AsideBody

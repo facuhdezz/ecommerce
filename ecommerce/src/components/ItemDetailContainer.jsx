@@ -34,8 +34,10 @@ const ItemDetailContainer = () => {
                             <li key={index}>{caracteristica}</li>
                         ))}
                     </ul>
-                    <button className="btn btn-primary w-50">Comprar</button>
-                    <button className="btn btn-secondary w-50">Agregar al carrito</button>
+                    <div className="d-inline-flex gap-3">
+                        <button className="btn btn-primary">Comprar</button>
+                        <button className="btn btn-secondary">Agregar al carrito</button>
+                    </div>
                 </div>
             </section>
             {producto.category && <ItemList idCat={producto.category} />}
