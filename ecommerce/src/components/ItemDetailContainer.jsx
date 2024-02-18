@@ -5,6 +5,7 @@ import ItemList from "./ItemList";
 
 const ItemDetailContainer = () => {
     const [producto, setProducto] = useState([]);
+    const [mostrar, setMostrar] = useState("block");
     const { id } = useParams();
 
     useEffect(() => {
@@ -22,6 +23,10 @@ const ItemDetailContainer = () => {
 
     }, [id]);
 
+    const displayList = () => {
+        setMostrar((prevMostrar) => (prevMostrar === "none" ? "block" : "none")); // Cuando se hace un hover a la imagen se ejecuta la función modificando el valor de mostrar
+    }
+
     return (
         <>
             <section className="productDetail">
@@ -29,13 +34,18 @@ const ItemDetailContainer = () => {
                 <div className="description">
                     <h2>{producto.nombre}</h2>
                     <h3>{producto.moneda}<span> {producto.precio}</span></h3>
-                    <ul>
-                        {producto.caracteristicas && producto.caracteristicas.map((caracteristica, index) => (
-                            <li key={index}>{caracteristica}</li>
-                        ))}
-                    </ul>
-                    <button className="btn btn-primary w-50">Comprar</button>
-                    <button className="btn btn-secondary w-50">Agregar al carrito</button>
+                    {/* <div className="d-inline-flex gap-4">
+                        <button className="btn btn-primary">Comprar</button>
+                        <button className="btn btn-secondary">Agregar al carrito</button>
+                    </div> */}
+                    <div className="caracteristicas">
+                        <h4 onClick={displayList}>+ Características:</h4>
+                        <ul style={{ display: mostrar }}>
+                            {producto.caracteristicas && producto.caracteristicas.map((caracteristica, index) => (
+                                <li key={index}>{caracteristica}</li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
             </section>
             {producto.category && <ItemList idCat={producto.category} />}

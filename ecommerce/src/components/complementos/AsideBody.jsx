@@ -11,18 +11,14 @@ const AsideBody = () => {
                 <Routes>
                     <Route path={"/item/:id"} element={<ItemCount stock={10} initial={initial} />} />
                 </Routes>                
-                <Link className="linkAside" to={"/category/procesadores"}>+ Procesadores</Link> 
                 <Link className="linkAside" to={"/category/graficas"}>+ Gráficas</Link>
-                <Link className="linkAside" to={"/category/gabinetes"}>+ Gabinetes</Link> 
-                <Link className="linkAside" to={"/category/equipos"}>+ Equipos</Link> 
+                <Link className="linkAside" to={"/category/gabinetes"}>+ Gabinetes</Link>
                 <Link className="linkAside" to={"/category/monitores"}>+ Monitores</Link> 
-                <Link className="linkAside" to={"/category/laptops"}>+ Laptops</Link> 
-                <Link className="linkAside" to={"/category/perifericos"}>+ Periféricos</Link> 
-                <Link className="linkAside" to={"/category/ram"}>+ Memorias Ram</Link> 
+                <Link className="linkAside" to={"/category/laptops"}>+ Laptops</Link>
                 <CartWidget />
             </article>
         </>
     )
 }
 
-export default AsideBody;
+export default AsideBody

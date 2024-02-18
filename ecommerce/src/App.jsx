@@ -1,8 +1,9 @@
-import NavBar from "./components/NavBar"
-import ItemListContainer from "./components/ItemListContainer"
-import { Link, Routes, Route } from "react-router-dom"
-import DestacadosList from "./components/complementos/DestacadosList"
-import ItemDetailContainer from "./components/ItemDetailContainer"
+import NavBar from "./components/NavBar";
+import ItemListContainer from "./components/ItemListContainer";
+import { Routes, Route } from "react-router-dom";
+import DestacadosList from "./components/complementos/DestacadosList";
+import ItemDetailContainer from "./components/ItemDetailContainer";
+import ColorMode from "./components/complementos/ColorMode";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <NavBar />
       </aside>
       <main>
+        <ColorMode />
         <Routes>
           <Route path={"/"} element={<><DestacadosList /><ItemListContainer /></>} />
           <Route path={"/category/:id"} element={<ItemListContainer />} />
@@ -21,4 +23,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
