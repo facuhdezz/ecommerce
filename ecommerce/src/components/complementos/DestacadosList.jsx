@@ -1,21 +1,29 @@
 import { useEffect, useState } from "react";
-import productosDestacados from "../productosDestacados";
 import Item from "../Item";
+import { getFirestore, collection, getDocs } from "firebase/firestore";
 
 const DestacadosList = () => {
     const [productList, setProductList] = useState([]);
 
     useEffect(() => {
-        const promesa = new Promise((resolve) => {
-            setTimeout(() => {
-                resolve(productosDestacados);
-            }, 2000)
-        });
-
-        promesa.then(data => {
-            setProductList(data)
-        });
+        const db = getFirestore();
+        const destCollection = collection(db, "destacados");
+        getDocs(destCollection).then(result => {
+            setProductList(result.docs.map(item => ({id:item.id, ...item.data()})))
+        })
     }, []);
+
+    //Añado los productos destacados a la base de datos en firebase
+    // useEffect(() => {
+    //     const db = getFirestore();
+    //     const itemsCollection = collection(db, "destacados");
+
+    //     productosDestacados.forEach(producto => {
+    //         addDoc(itemsCollection, producto);
+    //     });
+
+    //     console.log("Los productos se subieron correctamente!");
+    // }, [])
 
     return (
         <>

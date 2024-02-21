@@ -1,5 +1,5 @@
-import light from "../../assets/icon-theme/light.png";
-import dark from "../../assets/icon-theme/dark.png";
+import light from "../../assets/icon-theme/light-2.png";
+import dark from "../../assets/icon-theme/dark-2.png";
 
 const ColorMode = () => {
     const lightmode = () => {

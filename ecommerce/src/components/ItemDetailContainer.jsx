@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import productos from "./productos";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
+import ItemCount from "./ItemCount";
+import { getFirestore, addDoc, collection, getDoc, query, where, doc } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
     const [producto, setProducto] = useState([]);
@@ -9,23 +10,32 @@ const ItemDetailContainer = () => {
     const { id } = useParams();
 
     useEffect(() => {
+        const db = getFirestore();
+        const product = doc(db, "items", id);
 
-        const promesa = new Promise((resolve) => {
-            let productsToAppend = productos.find(product => product.id == id);
-            setTimeout(() => {
-                resolve(productsToAppend);
-            }, 2000)
-        });
-
-        promesa.then(data => {
-            setProducto(data);
-        });
-
-    }, [id]);
+        getDoc(product).then(result => {
+            setProducto({id: result.id, ...result.data()})
+        })
+    }, [id])
 
     const displayList = () => {
         setMostrar((prevMostrar) => (prevMostrar === "none" ? "block" : "none")); // Cuando se hace un hover a la imagen se ejecuta la función modificando el valor de mostrar
     }
+
+    const [anchoVentana, setAnchoVentana] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setAnchoVentana(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
 
     return (
         <>
@@ -34,10 +44,6 @@ const ItemDetailContainer = () => {
                 <div className="description">
                     <h2>{producto.nombre}</h2>
                     <h3>{producto.moneda}<span> {producto.precio}</span></h3>
-                    {/* <div className="d-inline-flex gap-4">
-                        <button className="btn btn-primary">Comprar</button>
-                        <button className="btn btn-secondary">Agregar al carrito</button>
-                    </div> */}
                     <div className="caracteristicas">
                         <h4 onClick={displayList}>+ Características:</h4>
                         <ul style={{ display: mostrar }}>
@@ -47,6 +53,7 @@ const ItemDetailContainer = () => {
                         </ul>
                     </div>
                 </div>
+                    {anchoVentana <= 600 && (<ItemCount stock={10} initial={1} />)}
             </section>
             {producto.category && <ItemList idCat={producto.category} />}
         </>

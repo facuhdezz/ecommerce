@@ -3,7 +3,6 @@ import ItemListContainer from "./components/ItemListContainer";
 import { Routes, Route } from "react-router-dom";
 import DestacadosList from "./components/complementos/DestacadosList";
 import ItemDetailContainer from "./components/ItemDetailContainer";
-import ColorMode from "./components/complementos/ColorMode";
 
 function App() {
   return (
@@ -12,7 +11,7 @@ function App() {
         <NavBar />
       </aside>
       <main>
-        <ColorMode />
+        {/* <ColorMode /> */}
         <Routes>
           <Route path={"/"} element={<><DestacadosList /><ItemListContainer /></>} />
           <Route path={"/category/:id"} element={<ItemListContainer />} />
