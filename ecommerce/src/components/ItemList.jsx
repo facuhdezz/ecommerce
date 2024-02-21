@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
 import Item from "./Item";
 import { useParams } from "react-router-dom";
-import { getFirestore, addDoc, collection, getDocs, query, where } from "firebase/firestore";
+import { getFirestore, collection, getDocs, query, where } from "firebase/firestore";
 
 const ItemList = ({idCat}) => {
     const [productList, setProductList] = useState([]);
     const { id } = useParams();
-    console.log(idCat)
 
     //Añado los productos destacados a la base de datos en firebase
     // useEffect(() => {

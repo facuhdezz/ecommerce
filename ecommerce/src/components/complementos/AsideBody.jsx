@@ -23,9 +23,9 @@ const AsideBody = () => {
     return (
         <>
             <article className="bodyAside">
-                <Routes>
+                {/* <Routes>
                     {anchoVentana > 600 && (<Route path={"/item/:id"} element={<ItemCount stock={10} initial={initial} />} />)}                    
-                </Routes>
+                </Routes> */}
                 <Link className="linkAside" to={"/category/graficas"}>+ Gráficas</Link>
                 <Link className="linkAside" to={"/category/gabinetes"}>+ Gabinetes</Link>
                 <Link className="linkAside" to={"/category/monitores"}>+ Monitores</Link>
