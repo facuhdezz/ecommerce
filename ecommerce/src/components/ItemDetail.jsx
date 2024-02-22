@@ -32,7 +32,7 @@ const ItemDetail = ({producto}) => {
     return (
         <>
             <section className="productDetail">
-                <img src={producto.img} className="imgProducto" />
+                <img src={producto.img} alt={producto.nombre} className="imgProducto" />
                 <div className="description">
                     <h2>{producto.nombre}</h2>
                     <h3>{producto.moneda}<span> {producto.precio}</span></h3>
@@ -44,7 +44,7 @@ const ItemDetail = ({producto}) => {
                             ))}
                         </ul>
                     </div>
-                    <ItemCount onAdd={onAdd} producto={producto} stock={Number(producto.stock)} />
+                    <ItemCount onAdd={onAdd} producto={producto} stock={Number(producto.stock)} initial={1}/>
                 </div>
             </section>
         </>

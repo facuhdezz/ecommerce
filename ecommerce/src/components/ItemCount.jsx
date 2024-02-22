@@ -1,15 +1,17 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { BotonAgregarComprar, BotonCarrito } from "./complementos/ItemCountButtons";
+import { CartContext } from "./context/CartContext"; 
 
-const ItemCount = ({ onAdd, producto, stock }) => {
+const ItemCount = ({ onAdd, producto, stock, initial }) => {
 
-    const [contador, setContador] = useState(1);
+    const [contador, setContador] = useState(initial);
     const [itemStock, setItemStock] = useState(stock);
     const [added, setAdded] = useState(false);
 
     const incrementar = () => {
         if (contador < itemStock) {
             setContador(contador + 1);
+            // subTotalProduct(contador + 1)
         } else {
             alert('No hay más cantidad disponible');
         }
@@ -18,6 +20,7 @@ const ItemCount = ({ onAdd, producto, stock }) => {
     const decrementar = () => {
         if (contador > 1) {
             setContador(contador - 1);
+            // subTotalProduct(contador - 1)
         }
     }
 
@@ -27,6 +30,7 @@ const ItemCount = ({ onAdd, producto, stock }) => {
             setContador(1);
             setAdded(true);
             setItemStock(itemStock - contador);
+            // subTotalProduct(contador)
         }
     }
 
@@ -38,8 +42,6 @@ const ItemCount = ({ onAdd, producto, stock }) => {
         setAdded(false)
         setItemStock(stock)
     }, [producto])
-
-    useEffect(() => { localStorage.setItem("initial", contador) }, [contador]);
 
     return (
         <>

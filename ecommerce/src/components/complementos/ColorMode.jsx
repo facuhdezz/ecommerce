@@ -13,10 +13,10 @@ const ColorMode = () => {
     return (
         <>
             <button type="button" className="btn-color btn-lightmode dark-icons" onClick={lightmode}>
-                <img src={light} />
+                <img src={light} alt="icono de sol, lightmode"/>
             </button>
             <button type="button" className="btn-color btn-darkmode light-icons" onClick={darkmode}>
-                <img src={dark} />
+                <img src={dark} alt="icono de luna, darkmode"/>
             </button>
         </>
     )

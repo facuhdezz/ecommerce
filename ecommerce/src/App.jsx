@@ -5,6 +5,7 @@ import DestacadosList from "./components/complementos/DestacadosList";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import CartContextProvider from "./components/context/CartContext";
 import { useEffect, useRef } from "react";
+import Cart from "./components/Cart";
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
   // Aquí ejecuto una función al escucar el evento 'scrollToTop',
   // ya que al cambiar entre rutas el main se quedaba congelado en su posición actual
   // y podría confundir al usuario, así que se hace un scroll a la parte superior del main
-  // este evento se emite desde botones como el home (en AsideCab.jsx) o las cards de productos en las categorías (en Item.jsx).
+  // este evento se emite desde botones como el home (en AsideCab.jsx en /complementos) o las cards de productos en las categorías (en Item.jsx).
 
   useEffect(() => {
     const handleScrollToTop = () => {
@@ -40,6 +41,7 @@ function App() {
             <Route path={"/"} element={<><DestacadosList /><ItemListContainer /></>} />
             <Route path={"/category/:id"} element={<ItemListContainer />} />
             <Route path={"/item/:id"} element={<ItemDetailContainer />} />
+            <Route path={"/cart"} element={<Cart />} />
           </Routes>
         </main>
       </CartContextProvider>

@@ -22,7 +22,7 @@ const CartWidget = () => {
             {cart.length > 0 && <div className="d-flex flex-column gap-4 cartPreview">
                 {cart.map(item => (
                     <div className="d-inline-flex gap-3 justify-content-between" key={item.id}>
-                        <img src={item.img} />
+                        <img src={item.img} alt={item.nombre} />
                         <div className="d-flex flex-column gap-1">
                             <h4>{item.nombre}</h4>
                             <h3>{item.moneda} {item.precio} x {item.cantidad}u</h3>
@@ -30,7 +30,7 @@ const CartWidget = () => {
                         <button type="button" onClick={() => {removeProduct(item.idx)}}><p>X</p></button>
                     </div>
                 ))}
-                <h3>Precio Final: USD {totalPrice()}</h3>
+                <h3>Sub Total: USD {totalPrice()}</h3>
             </div>}
             {cart.length > 0 && <button className="limpiarCarrito" onClick={() => {clearCart()}}>Limpiar Carrito</button>}
         </div>
