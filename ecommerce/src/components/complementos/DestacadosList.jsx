@@ -1,17 +1,26 @@
 import { useEffect, useState } from "react";
 import Item from "../Item";
-import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { getFirestore, collection, getDocs, query, where } from "firebase/firestore";
 
 const DestacadosList = () => {
     const [productList, setProductList] = useState([]);
 
+    // useEffect(() => {
+    //     const db = getFirestore();
+    //     const destCollection = collection(db, "destacados");
+    //     getDocs(destCollection).then(result => {
+    //         setProductList(result.docs.map(item => ({id:item.id, ...item.data()})))
+    //     })
+    // }, []);
+
     useEffect(() => {
         const db = getFirestore();
-        const destCollection = collection(db, "destacados");
-        getDocs(destCollection).then(result => {
-            setProductList(result.docs.map(item => ({id:item.id, ...item.data()})))
+        const q = query(collection(db, "items"), where("destacados", "==", true))
+
+        getDocs(q).then(result => {
+            setProductList(result.docs.map(item => ({id: item.id, ...item.data()})))
         })
-    }, []);
+    }, [])
 
     //Añado los productos destacados a la base de datos en firebase
     // useEffect(() => {

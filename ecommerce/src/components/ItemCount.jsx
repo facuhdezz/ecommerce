@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { BotonAgregarComprar, BotonCarrito } from "./complementos/ItemCountButtons";
 
 const ItemCount = ({ onAdd, producto, stock }) => {
 
@@ -36,28 +36,8 @@ const ItemCount = ({ onAdd, producto, stock }) => {
 
     useEffect(() => {
         setAdded(false)
+        setItemStock(stock)
     }, [producto])
-
-    const BotonAgregarComprar = () => {
-        return (
-            <>
-                <div className="agregar">
-                    <button id="agregarCarrito" className="agregarCarrito" onClick={addToCart}>Agregar al carrito</button>
-                </div>
-                <div className="comprar">
-                    <Link to={"/cart"}> <button id="agregarCarrito" className="agregarCarrito" onClick={addToCart}>Comprar</button> </Link>
-                </div>
-            </>
-        );
-    }
-
-    const BotonCarrito = () => {
-        return (
-            <div className="comprar">
-                <Link to={"/cart"}> <button id="irCarrito" className="agregarCarrito">Ir al Carrito</button> </Link>
-            </div>
-        );
-    }
 
     useEffect(() => { localStorage.setItem("initial", contador) }, [contador]);
 
@@ -69,7 +49,7 @@ const ItemCount = ({ onAdd, producto, stock }) => {
                     <p>{contador}</p>
                     <button id="incrementar" className="botonesContador" onClick={incrementar}>+</button>
                 </div>
-                {added ? <BotonCarrito /> : <BotonAgregarComprar />}
+                {added ? <BotonCarrito /> : <BotonAgregarComprar addToCart={addToCart}/>}
             </div>
         </>
     )
