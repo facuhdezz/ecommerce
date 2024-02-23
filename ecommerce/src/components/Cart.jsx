@@ -13,7 +13,7 @@ const Cart = () => {
         return (
             <section className="cartPage">
                 <h1 className="titulos text-center">Carrito de compras</h1>
-                <h2 className="text-center">Lo sentimos</h2>
+                <h2 className="subt text-center">Lo sentimos</h2>
                 <h1 className="titulos text-center alert">No se encontraron productos</h1>
                 <Content />
             </section>
@@ -40,7 +40,7 @@ const Cart = () => {
                             {cart.map(product => (
                                 <tr key={product.idx}>
                                     <th><Link to={"/item/" + product.id}><img src={product.img} alt={product.nombre} className="imgProduct" /></Link></th>
-                                    <th>{product.nombre}</th>
+                                    <th><Link to={"/item/" + product.id}>{product.nombre}</Link></th>
                                     <th>{product.moneda} {product.precio}</th>
                                     <th>{product.cantidad}</th>
                                     <th>{product.moneda} {product.precio * product.cantidad}</th>

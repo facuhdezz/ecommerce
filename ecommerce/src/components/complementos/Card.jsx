@@ -18,7 +18,7 @@ const Card = ({ img, description, id, link }) => {
 
     return (
         <div id={id} onMouseEnter={hoverImg} onMouseLeave={hoverImg}> {/* Utilizo onMouseEnter y onMouseOver para ejecutar la funcion hoverImg al pasar el mouse por encima del div */}
-            <Link to={"/category/" + link} onClick={handleClick}><img src={img} alt={description} /></Link>
+            <Link to={"/category/" + link} onClick={handleClick}><img src={img} alt={description} style={{width: '100%', height: '100%'}}/></Link>
             <div className="tituloCat">
                 <h1 id={"titulo"+id} style={{display: mostrar}}>{description}</h1>
             </div>

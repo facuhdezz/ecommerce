@@ -6,17 +6,17 @@ export const BotonAgregarComprar = ({addToCart}) => {
             <div className="agregar">
                 <button id="agregarCarrito" className="agregarCarrito" onClick={addToCart}>Agregar al carrito</button>
             </div>
-            <div className="comprar">
-                <Link to={"/cart"}> <button id="agregarCarrito" className="agregarCarrito" onClick={addToCart}>Comprar</button> </Link>
-            </div>
+            <Link to={"/cart"}> <div className="comprar">
+                <button id="agregarCarrito" className="agregarCarrito" onClick={addToCart}>Comprar</button>
+            </div> </Link>
         </>
     );
 }
 
 export const BotonCarrito = () => {
     return (
-        <div className="comprar">
-            <Link to={"/cart"}> <button id="irCarrito" className="agregarCarrito">Ir al Carrito</button> </Link>
-        </div>
+        <Link to={"/cart"}> <div className="comprar">
+            <button id="irCarrito" className="agregarCarrito">Ir al Carrito</button>
+        </div> </Link>
     );
 }
