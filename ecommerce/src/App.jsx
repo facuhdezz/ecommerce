@@ -6,6 +6,7 @@ import ItemDetailContainer from "./components/ItemDetailContainer";
 import CartContextProvider from "./components/context/CartContext";
 import { useEffect, useRef } from "react";
 import Cart from "./components/Cart";
+import Checkout from "./components/Checkout";
 
 function App() {
 
@@ -41,7 +42,8 @@ function App() {
             <Route path={"/"} element={<><DestacadosList /><ItemListContainer /></>} />
             <Route path={"/category/:id"} element={<ItemListContainer />} />
             <Route path={"/item/:id"} element={<ItemDetailContainer />} />
-            <Route path={"/cart"} element={<Cart />} />
+            <Route path={"/cart"} element={<Cart />} />            
+            <Route path={"/checkout"} element={<Checkout />} />
           </Routes>
         </main>
       </CartContextProvider>

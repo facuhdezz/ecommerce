@@ -44,22 +44,24 @@ const Cart = () => {
                                     <th>{product.moneda} {product.precio}</th>
                                     <th>{product.cantidad}</th>
                                     <th>{product.moneda} {product.precio * product.cantidad}</th>
-                                    <th onClick={() => { removeProduct(product.idx) }}><img src={trash} className="trash dark-icons" alt="borrar elemento"/><img src={trashLight} className="trash light-icons" alt="borrar elemento"/></th>
+                                    <th onClick={() => { removeProduct(product.idx) }}><img src={trash} className="trash dark-icons" alt="borrar elemento" /><img src={trashLight} className="trash light-icons" alt="borrar elemento" /></th>
                                 </tr>
                             ))}
                         </tbody>
                     </table>
                 </div>
-                <div className="cartTotal d-flex flex-column gap-3">
-                    <h2 className="mb-3">Totales del carrito</h2>
-                    <h5>Sub Total: <br /><span>USD {totalPrice()}</span></h5>
-                    <h5>Costo de envío: <br /><span>USD {envio.toFixed(2)}</span></h5>
-                    <h5>Total: <br /><span>USD {totalPrice() + envio}</span></h5>
-                    <div className="btnEnd">
-                        <Link to={"/cart"}><button type="button" className="btnCart">Terminar compra</button></Link>
-                    </div>
-                    <div className="btnContinue">
-                        <Link to={"/"}><button type="button" className="btnCart">Seguir explorando</button></Link>
+                <div>
+                    <div className="cartTotal d-flex flex-column gap-3">
+                        <h2 className="mb-3">Totales del carrito</h2>
+                        <h5>Sub Total: <br /><span>USD {totalPrice()}</span></h5>
+                        <h5>Costo de envío: <br /><span>USD {envio.toFixed(2)}</span></h5>
+                        <h5>Total: <br /><span>USD {totalPrice() + envio}</span></h5>
+                        <div className="btnEnd">
+                            <Link to={"/checkout"}><button type="button" className="btnCart">Terminar compra</button></Link>
+                        </div>
+                        <div className="btnContinue">
+                            <Link to={"/"}><button type="button" className="btnCart">Seguir explorando</button></Link>
+                        </div>
                     </div>
                 </div>
             </article>

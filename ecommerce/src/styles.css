@@ -90,10 +90,10 @@ button {
 
 .btn-color {
   transition: .1s ease-in;
-  /* position: absolute;
-  top: -30px;
-  right: -30px;
-  z-index: 2; */
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-20px, 20px);
 }
 
 .btn-color:hover {
@@ -121,6 +121,7 @@ button {
   --segundo-background: #0e0e14;
   --tercer-background: rgb(5, 5, 5);
   --cuarto-background: #171720;
+  --quinto-background: #393944;
   --card-background: #252525;
   --primer-color: rgb(255, 255, 255);
   --segundo-color: rgb(199, 199, 199);
@@ -130,8 +131,9 @@ button {
 :root[data-theme="light"] {
   --primer-background: linear-gradient(153deg, rgb(215, 215, 255) 0%, rgb(215, 215, 255) 25%, rgba(1,16,73,1) 70%, rgb(215, 215, 255) 90%, rgb(215, 215, 255) 100%);
   --segundo-background: rgba(255,255,255,0.8);
-  --tercer-background: rgb(195, 194, 230);
+  --tercer-background: rgb(211, 211, 226);
   --cuarto-background: #ffffff;
+  --quinto-background: #f8f6ff;
   --card-background: #ffffff;
   --primer-color: rgb(41, 41, 41);
   --segundo-color: rgb(199, 199, 199);
@@ -173,6 +175,7 @@ aside {
 }
 
 .bodyAside {
+  position: relative;
   height: 100%;
   gap: 10px;
   overflow-y: scroll;
@@ -189,6 +192,10 @@ aside {
 
 .bodyAside article {
   margin-top: 15px;
+}
+
+.menuDesplegable {
+  display: none;
 }
 
 .footerIcons {
@@ -284,7 +291,7 @@ aside {
 }
 
 .titulos {
-  margin-left: 20px;
+  margin-inline: 20px;
   text-transform: uppercase;
   font-size: 3rem;
   font-family: 'Kanit', sans-serif;
@@ -613,6 +620,29 @@ aside {
   background-color: rgb(9, 9, 36);
 }
 
+.cartPage .order {
+  width: 80%;
+}
+
+.order div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.order label {
+  font-size: 1.3rem;
+}
+
+.order input {
+  background-color: var(--quinto-background);
+  color: var(--primer-color);
+  height: 40px;
+  padding-inline: 15px;
+  border-radius: 7px;
+  border: none;
+}
+
 /* ---- Grilla ---- */
 
 .categorias {
@@ -714,6 +744,38 @@ aside {
   grid-area: ram;
 }
 
+/* ------    SPINNER    ------ */
+
+.spinner {
+  position: relative;
+  max-width: fit-content;
+}
+
+.spinnerBase {
+  width: 150px;
+  animation: spin 1s ease infinite;
+}
+
+.spinnerLogo {
+  width: 91px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(29.5px, 29.5px);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
 /* ------    MEDIAS QUERY    ------ */
 
 @media (max-width: 1700px) {
@@ -797,20 +859,62 @@ aside {
     "mdb mdb mdb mdb mdb";
     gap: 10px;
   }
+
+  .cartPage .alert {
+    font-size: 3rem;
+  }
+
+  .cartPage article {
+    flex-direction: column;
+    margin-inline: 0;
+  }
+
+  .tabla {
+    overflow-x: scroll;
+    width: 100% !important;
+  }
+
+  .cartPage .order {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .titulos {
+    font-size: 2.6rem;
+  }
+
+  .cartPage .alert {
+    font-size: 1.8rem;
+  }
 }
 
 @media (max-width: 600px) {
   .root {
     flex-direction: column;
+    height: auto;
   }
 
   aside {
-    flex-direction: row;
     width: 100%;
     height: auto;
   }
 
+  .menuDesplegable {
+    display: block;
+    transition: .2s;
+  }
+
+  .menuDesplegable:hover {
+    cursor: pointer;
+    letter-spacing: 2px;
+  }
+
   .root > main {
     width: 100%;
+  }
+  
+  .footerAside{
+    padding: 10px;
   }
 }

@@ -26,7 +26,7 @@ const AsideCab = () => {
                         <h5>Inicio</h5>
                     </Link>
                 </div>
-                <ColorMode />
+                {/* <ColorMode /> */}
             </div>
         </header>
     )

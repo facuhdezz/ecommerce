@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import Item from "./Item";
 import { useParams } from "react-router-dom";
 import { getFirestore, collection, getDocs, query, where } from "firebase/firestore";
+import Spinner from "./Spinner";
 
 const ItemList = ({idCat}) => {
     const [productList, setProductList] = useState([]);
+    const [loading, setLoading] = useState(true);
     const { id } = useParams();
 
     //Añado los productos destacados a la base de datos en firebase
@@ -25,6 +27,7 @@ const ItemList = ({idCat}) => {
 
         getDocs(q).then(result => {
             setProductList(result.docs.map(item => ({id: item.id, ...item.data()})))
+            setLoading(true)
         })
     }, [id])
 
