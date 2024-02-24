@@ -1,24 +1,35 @@
 import { useEffect, useState } from "react";
-import productos from "./productos";
 import Item from "./Item";
 import { useParams } from "react-router-dom";
+import { getFirestore, collection, getDocs, query, where } from "firebase/firestore";
+import Spinner from "./Spinner";
 
 const ItemList = ({idCat}) => {
     const [productList, setProductList] = useState([]);
+    const [loading, setLoading] = useState(true);
     const { id } = useParams();
 
-    useEffect(() => {
-        const promesa = new Promise((resolve) => {
-            let productsToAppend = productos.filter(product => (product.category == id || product.category == idCat));
-            setTimeout(() => {
-                resolve(productsToAppend);
-            }, 2000);
-        });
+    //Añado los productos destacados a la base de datos en firebase
+    // useEffect(() => {
+    //     const db = getFirestore();
+    //     const itemsCollection = collection(db, "items");
 
-        promesa.then(data => {
-            setProductList(data)
-        });
-    }, [id]);
+    //     productos.forEach(producto => {
+    //         addDoc(itemsCollection, producto);
+    //     });
+
+    //     console.log("Los productos se subieron correctamente!");
+    // }, [])
+
+    useEffect(() => {
+        const db = getFirestore();
+        const q = query(collection(db, "items"), where("category", "==", `${idCat || id}`))
+
+        getDocs(q).then(result => {
+            setProductList(result.docs.map(item => ({id: item.id, ...item.data()})))
+            setLoading(true)
+        })
+    }, [id])
 
     return (
         <>

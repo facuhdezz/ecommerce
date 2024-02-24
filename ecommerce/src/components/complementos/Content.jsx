@@ -11,7 +11,7 @@ const Content = () => {
     return (
         <section className="categorias">
             <h1 className="titulos">Descubrí</h1>
-            <div className="grid">
+            <div className="grid" style={{width: '98%'}}>
                 <Card img={Procesador} description={"Procesadores"} id={"procesador"} link={"procesadores"} />
                 <Card img={Gabinete} description={"Gabinetes de PC"} id={"gabinete"} link={"gabinetes"} />
                 <Card img={Grafica} description={"Tarjetas Gráficas"} id={"grafica"} link={"graficas"} />
