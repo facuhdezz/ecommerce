@@ -1,6 +1,5 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { BotonAgregarComprar, BotonCarrito } from "./complementos/ItemCountButtons";
-import { CartContext } from "./context/CartContext"; 
 
 const ItemCount = ({ onAdd, producto, stock, initial }) => {
 
@@ -11,18 +10,16 @@ const ItemCount = ({ onAdd, producto, stock, initial }) => {
     const incrementar = () => {
         if (contador < itemStock) {
             setContador(contador + 1);
-            // subTotalProduct(contador + 1)
         } else {
             alert('No hay más cantidad disponible');
-        }
-    }
+        };
+    };
 
     const decrementar = () => {
         if (contador > 1) {
             setContador(contador - 1);
-            // subTotalProduct(contador - 1)
-        }
-    }
+        };
+    };
 
     const addToCart = () => {
         if (contador <= stock) {
@@ -30,18 +27,17 @@ const ItemCount = ({ onAdd, producto, stock, initial }) => {
             setContador(1);
             setAdded(true);
             setItemStock(itemStock - contador);
-            // subTotalProduct(contador)
-        }
-    }
+        };
+    };
 
     useEffect(() => {
-        setItemStock(stock)
+        setItemStock(stock);
     }, [stock]);
 
     useEffect(() => {
-        setAdded(false)
-        setItemStock(stock)
-    }, [producto])
+        setAdded(false);
+        setItemStock(stock);
+    }, [producto]);
 
     return (
         <>
@@ -54,7 +50,7 @@ const ItemCount = ({ onAdd, producto, stock, initial }) => {
                 {added ? <BotonCarrito /> : <BotonAgregarComprar addToCart={addToCart}/>}
             </div>
         </>
-    )
+    );
 }
 
 export default ItemCount;

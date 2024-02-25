@@ -1,6 +1,6 @@
-import spinnerLogo from "../assets/spinner/spinner_logo.svg"
-import spinnerLogoLight from "../assets/spinner/spinner_logo_light.svg"
-import spinnerBase from "../assets/spinner/spinner_base2.svg"
+import spinnerLogo from "../assets/spinner/spinner_logo.svg";
+import spinnerLogoLight from "../assets/spinner/spinner_logo_light.svg";
+import spinnerBase from "../assets/spinner/spinner_base2.svg";
 
 const Spinner = () => {
     return (
@@ -11,7 +11,7 @@ const Spinner = () => {
             <img className="spinnerLogo light-icons" src={spinnerLogoLight} alt="logo-netshop"/>
         </div>
         </div>
-    )
+    );
 }
 
 export default Spinner;

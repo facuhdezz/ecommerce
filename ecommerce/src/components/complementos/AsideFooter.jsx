@@ -1,7 +1,7 @@
-import github from "../../assets/github.svg"
-import linkedin from "../../assets/linkedin.svg"
-import githubLight from "../../assets/github-light.svg"
-import linkedinLight from "../../assets/linkedin-light.svg"
+import github from "../../assets/github.svg";
+import linkedin from "../../assets/linkedin.svg";
+import githubLight from "../../assets/github-light.svg";
+import linkedinLight from "../../assets/linkedin-light.svg";
 
 const AsideFooter = () => {
     return (
@@ -18,7 +18,7 @@ const AsideFooter = () => {
                 </a>
             </div>
         </footer>
-    )
+    );
 }
 
 export default AsideFooter;

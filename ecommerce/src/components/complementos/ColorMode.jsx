@@ -4,11 +4,11 @@ import dark from "../../assets/icon-theme/dark-2.png";
 const ColorMode = () => {
     const lightmode = () => {
         document.documentElement.setAttribute('data-theme', 'light');
-    }
+    };
 
     const darkmode = () => {
         document.documentElement.setAttribute('data-theme', 'dark');
-    }
+    };
 
     return (
         <>
@@ -19,7 +19,7 @@ const ColorMode = () => {
                 <img src={dark} alt="icono de luna, darkmode"/>
             </button>
         </>
-    )
+    );
 }
 
 export default ColorMode;

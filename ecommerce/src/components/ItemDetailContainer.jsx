@@ -15,17 +15,17 @@ const ItemDetailContainer = () => {
         const product = doc(db, "items", id);
 
         getDoc(product).then(result => {
-            setProducto({ id: result.id, ...result.data() })
-            setLoading(false)
+            setProducto({ id: result.id, ...result.data() });
+            setLoading(false);
         })
-    }, [id])
+    }, [id]);
 
     return (
         <>
             {loading ? <Spinner /> : <ItemDetail producto={producto} />}
             {producto.category && <ItemList idCat={producto.category} />}
         </>
-    )
+    );
 }
 
 export default ItemDetailContainer;

@@ -38,7 +38,7 @@ const CartWidget = () => {
             </div>}
             {cart.length > 0 && <button className="limpiarCarrito" onClick={() => {clearCart()}}>Limpiar Carrito</button>}
         </div>
-    )
+    );
 }
 
 export default CartWidget;

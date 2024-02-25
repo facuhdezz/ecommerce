@@ -11,7 +11,7 @@ export const BotonAgregarComprar = ({addToCart}) => {
             </div> </Link>
         </>
     );
-}
+};
 
 export const BotonCarrito = () => {
     return (
@@ -19,4 +19,4 @@ export const BotonCarrito = () => {
             <button id="irCarrito" className="agregarCarrito">Ir al Carrito</button>
         </div> </Link>
     );
-}
+};

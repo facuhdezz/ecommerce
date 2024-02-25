@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import ItemCount from "./ItemCount";
 import { CartContext } from "./context/CartContext";
 
@@ -8,26 +8,11 @@ const ItemDetail = ({producto}) => {
 
     const onAdd = (cantidad) => {
         addProduct(producto, cantidad);
-    }
+    };
 
     const displayList = () => {
         setMostrar((prevMostrar) => (prevMostrar === "none" ? "block" : "none")); // Cuando se hace un hover a la imagen se ejecuta la función modificando el valor de mostrar
-    }
-
-    const [anchoVentana, setAnchoVentana] = useState(window.innerWidth);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setAnchoVentana(window.innerWidth);
-        };
-
-        window.addEventListener('resize', handleResize);
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
-
+    };
 
     return (
         <>
@@ -48,7 +33,7 @@ const ItemDetail = ({producto}) => {
                 </div>
             </section>
         </>
-    )
+    );
 }
 
 export default ItemDetail;
