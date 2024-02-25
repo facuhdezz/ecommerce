@@ -9,7 +9,7 @@ const NavBar = () => {
             <AsideBody />
             <AsideFooter />
         </>
-    )
+    );
 }
 
 export default NavBar;

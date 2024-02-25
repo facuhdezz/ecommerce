@@ -1,11 +1,11 @@
-import Gabinete from '../../assets/img/gabinete1.jpg'
-import Laptop from '../../assets/img/laptop1.jpg'
-import Monitor from '../../assets/img/monitor1.jpg'
-import Procesador from '../../assets/img/procesador1.jpg'
-import Motherboard from '../../assets/img/motherboard1.jpg'
-import Mouse from '../../assets/img/mouse1.jpg'
-import Grafica from '../../assets/img/grafica1.jpg'
-import Card from './Card'
+import Gabinete from '../../assets/img/gabinete1.jpg';
+import Laptop from '../../assets/img/laptop1.jpg';
+import Monitor from '../../assets/img/monitor1.jpg';
+import Procesador from '../../assets/img/procesador1.jpg';
+import Motherboard from '../../assets/img/motherboard1.jpg';
+import Mouse from '../../assets/img/mouse1.jpg';
+import Grafica from '../../assets/img/grafica1.jpg';
+import Card from './Card';
 
 const Content = () => {
     return (
@@ -21,7 +21,7 @@ const Content = () => {
                 <Card img={Laptop} description={"Laptops"} id={"laptop"} link={"laptops"} />
             </div>
         </section>
-    )
+    );
 }
 
 export default Content;

@@ -15,7 +15,7 @@ const Item = (item) => {
             </div>
             <Link to={"/item/"+ item.link}><button>Detalles</button></Link>
         </div>
-    )
+    );
 }
 
 export default Item;

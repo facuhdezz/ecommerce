@@ -5,37 +5,17 @@ import Spinner from "../Spinner";
 
 const DestacadosList = () => {
     const [productList, setProductList] = useState([]);
-    const [loading, setLoading] = useState(true)
-
-    // useEffect(() => {
-    //     const db = getFirestore();
-    //     const destCollection = collection(db, "destacados");
-    //     getDocs(destCollection).then(result => {
-    //         setProductList(result.docs.map(item => ({id:item.id, ...item.data()})))
-    //     })
-    // }, []);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const db = getFirestore();
-        const q = query(collection(db, "items"), where("destacados", "==", true))
+        const q = query(collection(db, "items"), where("destacados", "==", true));
 
         getDocs(q).then(result => {
-            setProductList(result.docs.map(item => ({id: item.id, ...item.data()})))
-            setLoading(false)
-        })
-    }, [])
-
-    //Añado los productos destacados a la base de datos en firebase
-    // useEffect(() => {
-    //     const db = getFirestore();
-    //     const itemsCollection = collection(db, "destacados");
-
-    //     productosDestacados.forEach(producto => {
-    //         addDoc(itemsCollection, producto);
-    //     });
-
-    //     console.log("Los productos se subieron correctamente!");
-    // }, [])
+            setProductList(result.docs.map(item => ({id: item.id, ...item.data()})));
+            setLoading(false);
+        });
+    }, []);
 
     return (
         <>
@@ -49,7 +29,7 @@ const DestacadosList = () => {
                 </div>}
             </section>
         </>
-    )
+    );
 }
 
 export default DestacadosList;

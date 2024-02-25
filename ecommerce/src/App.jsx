@@ -7,6 +7,7 @@ import CartContextProvider from "./components/context/CartContext";
 import { useEffect, useRef } from "react";
 import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
+import Error404 from "./components/Error404";
 
 function App() {
 
@@ -44,11 +45,12 @@ function App() {
             <Route path={"/item/:id"} element={<ItemDetailContainer />} />
             <Route path={"/cart"} element={<Cart />} />            
             <Route path={"/checkout"} element={<Checkout />} />
+            <Route path={"*"} element={<Error404 />} />
           </Routes>
         </main>
       </CartContextProvider>
     </>
-  )
+  );
 }
 
 export default App;

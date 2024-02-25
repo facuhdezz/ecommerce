@@ -7,7 +7,7 @@ const ItemListContainer = () => {
             <ItemList />
             <Content />
         </>
-    )
+    );
 }
 
 export default ItemListContainer;

@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { CartContext } from "./context/CartContext";
 import trash from "../assets/trash.svg"
 import trashLight from "../assets/trash-light.svg"
@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import Content from "./complementos/Content"
 
 const Cart = () => {
-    const { cart, removeProduct, clearCart, totalProduct, totalPrice } = useContext(CartContext);
+    const { cart, removeProduct, totalPrice } = useContext(CartContext);
     const envio = 5;
 
     if (cart.length == 0) {
@@ -17,8 +17,8 @@ const Cart = () => {
                 <h1 className="titulos text-center alert">No se encontraron productos</h1>
                 <Content />
             </section>
-        )
-    }
+        );
+    };
 
     return (
         <section className="cartPage">
@@ -66,7 +66,7 @@ const Cart = () => {
                 </div>
             </article>
         </section>
-    )
+    );
 }
 
 export default Cart;

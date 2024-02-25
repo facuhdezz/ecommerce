@@ -12,10 +12,6 @@ const Card = ({ img, description, id, link }) => {
         window.dispatchEvent(new Event('scrollToTop'));
     };
 
-    // useEffect(() => {
-    //     document.getElementById(`titulo${id}`).style.display = mostrar; // cada vez que el mostrar cambia, el nuevo valor se agrega como estilo suplantando al otro
-    // }, [mostrar]);                                                      // con esto consigo que al hacer hover en la imagen aparezca el <h1>
-
     return (
         <div id={id} onMouseEnter={hoverImg} onMouseLeave={hoverImg}> {/* Utilizo onMouseEnter y onMouseOver para ejecutar la funcion hoverImg al pasar el mouse por encima del div */}
             <Link to={"/category/" + link} onClick={handleClick}><img src={img} alt={description} style={{width: '100%', height: '100%'}}/></Link>
@@ -23,7 +19,7 @@ const Card = ({ img, description, id, link }) => {
                 <h1 id={"titulo"+id} style={{display: mostrar}}>{description}</h1>
             </div>
         </div>
-    )
+    );
 }
 
 export default Card;

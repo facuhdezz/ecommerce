@@ -14,20 +14,20 @@ const Checkout = () => {
 
     const generarOrden = () => {
         if(nombre.length === 0 || email.length === 0 || telefono.length === 0) {
-            alert("Complete todos los campos")
+            alert("Complete todos los campos");
             return false;
-        }
+        };
 
         if(cart.length === 0) {
-            alert("No se encontraron productos")
+            alert("No se encontraron productos");
             return false;
-        }
+        };
 
         const buyer = {
             name: nombre,
             email: email,
             phone: telefono
-        }
+        };
 
         const items = cart.map(product => ({id:product.idx, title:product.nombre, price:product.precio, quantity:product.cantidad}));
         const fecha = new Date();
@@ -41,7 +41,7 @@ const Checkout = () => {
             clearCart();
             setOrderId(result.id);
         });
-    }
+    };
 
     return (
         <section className="cartPage">
@@ -122,7 +122,7 @@ const Checkout = () => {
                 </div>
             </article>
         </section>
-    )
+    );
 }
 
 export default Checkout;

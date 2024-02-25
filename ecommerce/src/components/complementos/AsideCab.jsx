@@ -3,9 +3,8 @@ import LogoLight from "../../assets/netshop-text-dark.svg";
 import Search from "../../assets/search.svg";
 import SearchLight from "../../assets/search-light.svg";
 import Home from "../../assets/home.svg";
-import HomeLight from "../../assets/home-light.svg"
+import HomeLight from "../../assets/home-light.svg";
 import { Link } from "react-router-dom";
-import ColorMode from "./ColorMode";
 
 const AsideCab = () => {
 
@@ -26,10 +25,9 @@ const AsideCab = () => {
                         <h5>Inicio</h5>
                     </Link>
                 </div>
-                {/* <ColorMode /> */}
             </div>
         </header>
-    )
+    );
 }
 
 export default AsideCab;
