@@ -7,3 +7,4 @@
 <h3>La página web simula toda la funcionalidad de un ecommerce, desde la visualización de productos y su información, agregarlos al carrito de compras y poder generar una orden de compra de los productos, orden que posteriormente se almacena en una base de datos.</h3>
 <h2>Información util</h2>
 <p>En la sección de about del repositorio podrás encontrar un link a la página desplegada en vercel, y dentro del proyecto hay un video y un gif mostrando su funcionamiento.</p>
+![imagen](https://github.com/facuhdezz/ecommerce/assets/140118973/288e0031-c226-4881-8088-340e1bafd6a5)
