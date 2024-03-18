@@ -1,6 +1,5 @@
 <h1>Bienvenidos a NetShop Uy</h1>
-<h3>Entrega final del curso de React de CoderHouse</h3>
-<h4>Comisión 49970 || 2024 || Facundo Hernández</h4>
+<h3>Demo de tienda e-commerce con React.js</h3>
 <h2>¿Qué es NetShop?</h2>
 <p>Es una plataforma de ecommerce sobre productos de tecnología construida creada con React, una biblioteca de JavaScript.</p>
 <p>En términos de maquetado, si bien se utiliza bootstrap en algunos momentos, la idea es poder darle una mayor personalización a la interfaz gráfica por lo que la mayor parte de los estilos estan hechos en css sin otras bibliotecas.</p>
