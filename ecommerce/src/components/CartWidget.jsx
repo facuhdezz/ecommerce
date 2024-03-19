@@ -31,7 +31,7 @@ const CartWidget = () => {
                             <h3>{item.moneda} {item.precio} x {item.cantidad}u</h3>
                         </div>
                         </div>
-                        <button type="button" onClick={() => {removeProduct(item.idx)}}><img src={trash} className="trash dark-icons" alt="borrar elemento" style={{width: "20px"}} /><img src={trashLight} className="trash light-icons" alt="borrar elemento" style={{width: "20px"}} /></button>
+                        <button type="button" onClick={() => {removeProduct(item.id)}}><img src={trash} className="trash dark-icons" alt="borrar elemento" style={{width: "20px"}} /><img src={trashLight} className="trash light-icons" alt="borrar elemento" style={{width: "20px"}} /></button>
                     </div>
                 ))}
                 <h3>Sub Total: USD {totalPrice()}</h3>

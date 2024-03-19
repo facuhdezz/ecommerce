@@ -10,14 +10,23 @@ const ItemDetailContainer = () => {
     const [loading, setLoading] = useState(true);
     const { id } = useParams();
 
-    useEffect(() => {
-        const db = getFirestore();
-        const product = doc(db, "items", id);
+    // useEffect(() => {
+    //     const db = getFirestore();
+    //     const product = doc(db, "items", id);
 
-        getDoc(product).then(result => {
-            setProducto({ id: result.id, ...result.data() });
-            setLoading(false);
-        })
+    //     getDoc(product).then(result => {
+    //         setProducto({ id: result.id, ...result.data() });
+    //         setLoading(false);
+    //     })
+    // }, [id]);
+
+    useEffect(() => {
+        fetch(`https://netshop-api.vercel.app/api/products/${id}`)
+            .then(res => res.json())
+            .then(data => {
+                setProducto(data[0]);
+                setLoading(false);
+            })
     }, [id]);
 
     return (

@@ -7,7 +7,7 @@ const Item = (item) => {
     };
 
     return (
-        <div className={item.clase}>
+        <div className={item.clase} key={item.id}>
             <Link to={"/item/"+ item.link} onClick={handleClick}><div className="card-img-conteiner"><img src={item.img} className="card-img-top" alt={item.nombre} /></div></Link> 
             <div className="card-body">
                 <h1>{item.nombre}</h1>
