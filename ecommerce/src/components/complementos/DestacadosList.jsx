@@ -7,14 +7,20 @@ const DestacadosList = () => {
     const [productList, setProductList] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        const db = getFirestore();
-        const q = query(collection(db, "items"), where("destacados", "==", true));
+    // useEffect(() => {
+    //     const db = getFirestore();
+    //     const q = query(collection(db, "items"), where("destacados", "==", true));
 
-        getDocs(q).then(result => {
-            setProductList(result.docs.map(item => ({id: item.id, ...item.data()})));
-            setLoading(false);
-        });
+    //     getDocs(q).then(result => {
+    //         setProductList(result.docs.map(item => ({id: item.id, ...item.data()})));
+    //         setLoading(false);
+    //     });
+    // }, []);
+
+    useEffect(() => {
+        fetch(`https://netshop-api.vercel.app/api/dest`)
+            .then(res => res.json())
+            .then(data => {setProductList(data); setLoading(false)})
     }, []);
 
     return (
