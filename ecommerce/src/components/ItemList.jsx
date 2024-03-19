@@ -19,15 +19,21 @@ const ItemList = ({idCat}) => {
     //     console.log("Los productos se subieron correctamente!");
     // }, [])
 
-    useEffect(() => {
-        const db = getFirestore();
-        const q = query(collection(db, "items"), where("category", "==", `${idCat || id}`));
+    // useEffect(() => {
+    //     const db = getFirestore();
+    //     const q = query(collection(db, "items"), where("category", "==", `${idCat || id}`));
 
-        getDocs(q).then(result => {
-            setProductList(result.docs.map(item => ({id: item.id, ...item.data()})));
-            setLoading(true);
-        });
-    }, [id]);
+    //     getDocs(q).then(result => {
+    //         setProductList(result.docs.map(item => ({id: item.id, ...item.data()})));
+    //         setLoading(true);
+    //     });
+    // }, [id]);
+
+    useEffect(() => {
+        fetch(`https://netshop-api.vercel.app/api/products?category=${idCat || id}`)
+            .then(res => res.json())
+            .then(data => setProductList(data))
+    }, [id])
 
     return (
         <>
