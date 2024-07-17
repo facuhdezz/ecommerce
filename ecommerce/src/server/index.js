@@ -12,11 +12,11 @@ console.log(url);
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
     res.send("Servidor")
 });
 
-app.get("/instagram", async (req, res) => {
+app.get("/api/instagram", async (req, res) => {
     try {
         const response = await fetch(url);
         if (!response.ok) {
