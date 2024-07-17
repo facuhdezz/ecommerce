@@ -3,7 +3,7 @@ import cors from "cors";
 import "dotenv/config.js";
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const token = process.env.INSTA_TOKEN;
 const url = `https://graph.instagram.com/me/media?fields=media_type,media_url&access_token=${token}`;

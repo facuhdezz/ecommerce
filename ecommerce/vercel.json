@@ -1,11 +1,23 @@
 {
+    "version": 2,
     "builds": [
-    { "src": "src/index.js", "use": "@vercel/node" }
+      {
+        "src": "src/server/index.js",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "src/index.jsx",
+        "use": "@vercel/static"
+      }
     ],
     "routes": [
       {
         "src": "/instagram",
-        "dest": "src/server/index.js"
+        "dest": "src/backend/index.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "src/index.jsx"
       }
     ]
   }
