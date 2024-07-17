@@ -2,8 +2,13 @@ import { useContext, useState } from "react";
 import { CartContext } from "./context/CartContext";
 import { Link } from "react-router-dom";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
+import { initMercadoPago, Wallet } from '@mercadopago/sdk-react';
 
 const Checkout = () => {
+    initMercadoPago('YOUR_PUBLIC_KEY', {
+        locale: 'es-UY'
+    });
+
     const [nombre, setNombre] = useState("");
     const [email, setEmail] = useState("");
     const [telefono, setTelefono] = useState("");
@@ -11,6 +16,32 @@ const Checkout = () => {
 
     const { cart, clearCart, totalPrice } = useContext(CartContext);
     const envio = 5;
+    console.log(cart);
+
+    const buy = async () => {
+        const orderData = cart.map(product => ({title:product.nombre, quantity:product.cantidad, unit_price:product.precio}))
+
+        try {const response = await fetch('http://localhost:3000/create_preference', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(orderData)
+        })
+
+        const preference = await response.json()
+        createCheckoutButton(preference.id)} catch(err) {
+            alert(err)
+        }
+    }
+
+    const createCheckoutButton = (preferenceId) => {
+        const renderComponent = () => {            
+            <Wallet initialization={{ preferenceId: preferenceId }} customization={{ texts:{ valueProp: 'smart_option'}}} />
+        }
+
+        renderComponent()
+    }
 
     const generarOrden = () => {
         if(nombre.length === 0 || email.length === 0 || telefono.length === 0) {
@@ -30,6 +61,7 @@ const Checkout = () => {
         };
 
         const items = cart.map(product => ({id:product.idx, title:product.nombre, price:product.precio, quantity:product.cantidad}));
+        console.log(items);
         const fecha = new Date();
         const date = `${fecha.getDate()}-${fecha.getMonth()+1}-${fecha.getFullYear()} ${fecha.getHours()}:${fecha.getMinutes()}`;
         const total = totalPrice() + envio;
@@ -67,7 +99,7 @@ const Checkout = () => {
                         </thead>
                         <tbody>
                             {cart.map(product => (
-                                <tr key={product.idx}>
+                                <tr key={product.id}>
                                     <th><Link to={"/item/" + product.id}>{product.nombre}</Link></th>
                                     <th>{product.moneda} {product.precio}</th>
                                     <th>{product.cantidad}</th>
@@ -121,6 +153,7 @@ const Checkout = () => {
                     </div>
                 </div>
             </article>
+            <div id="wallet_container"></div>
         </section>
     );
 }
