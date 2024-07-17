@@ -1,10 +1,13 @@
 import express from "express";
 import cors from "cors";
-import {MercadoPagoConfig, Preference} from "mercadopago";
+import "dotenv/config.js";
 
 const app = express();
 const port = 3000;
-const client = new MercadoPagoConfig({ accessToken: 'TEST-4698487181845581-042520-c034ae01a6c12e7bac06aef7c22b694e-1756864809' });
+
+const token = process.env.INSTA_TOKEN;
+const url = `https://graph.instagram.com/me/media?fields=media_type,media_url&access_token=${token}`;
+console.log(url);
 
 app.use(cors());
 app.use(express.json());
@@ -13,34 +16,19 @@ app.get("/", (req, res) => {
     res.send("Servidor")
 });
 
-app.post("/create_preference", async (req, res) => {
+app.get("/instagram", async (req, res) => {
     try {
-        const body = {
-            items: [
-                {
-                    title: req.body.title,
-                    quantity: Number(req.body.quantity),
-                    unit_price: Number(req.body.unit_price),
-                    currency_id: "UY"
-                }
-            ],
-            back_urls: {
-                succes: "https://www.youtube.com/",
-                failure: "https://www.youtube.com/",
-                pending: "https://www.youtube.com/"
-            },
-            auto_return: "approved",
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error('Failed to fetch data from Instagram API');
         }
-        const preference = new Preference(client)
-        const result = await preference.create({body});
-        res.json({
-            id: result.id
-        })
-    } catch(err) {
-        console.log(err);
-        res.status(500).json({error: "No se pudo comprobar el pago"});
+        const data = await response.json();
+        res.status(200).json(data);
+    } catch (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).json({ error: 'Failed to fetch data from Instagram API' });
     }
-})
+});
 
 app.listen(port, () => {
     console.log(`Servidor funcionando en el puerto ${port}`)

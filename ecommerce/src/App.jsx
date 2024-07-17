@@ -8,6 +8,7 @@ import { useEffect, useRef } from "react";
 import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
 import Error404 from "./components/Error404";
+import Feed from "./components/Instagram/Feed";
 
 function App() {
 
@@ -40,7 +41,7 @@ function App() {
         </aside>
         <main ref={mainRef}>
           <Routes>
-            <Route path={"/"} element={<><DestacadosList /><ItemListContainer /></>} />
+            <Route path={"/"} element={<><DestacadosList /><ItemListContainer /><Feed /></>} />
             <Route path={"/category/:id"} element={<ItemListContainer />} />
             <Route path={"/item/:id"} element={<ItemDetailContainer />} />
             <Route path={"/cart"} element={<Cart />} />            
