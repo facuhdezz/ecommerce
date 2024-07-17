@@ -5,7 +5,7 @@ const Feed = () => {
     const [instaFeed, setInstaFeed] = useState()
 
     useEffect(() => {
-        fetch('/instagram')
+        fetch('../../server/index/instagram')
             .then(res => res.json())
             .then(data => {
                 setInstaFeed(data.data);
