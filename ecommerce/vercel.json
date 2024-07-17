@@ -1,0 +1,8 @@
+{
+    "routes": [
+      {
+        "src": "/instagram",
+        "dest": "src/server/index.js"
+      }
+    ]
+  }
