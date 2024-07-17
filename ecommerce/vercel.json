@@ -2,7 +2,7 @@
     "routes": [
       {
         "src": "/instagram",
-        "dest": "src/backend/index.js"
+        "dest": "src/server/index.js"
       },
       {
         "src": "/(.*)",
